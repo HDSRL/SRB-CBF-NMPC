@@ -5,6 +5,9 @@
 #include <fstream>
 #include "RobotModel.hpp"
 #include <chrono>
+#include <cstdlib> // For getenv
+#include <string>  // For string manipulation
+#include <filesystem>
 
 
 using namespace ifopt;
@@ -927,8 +930,9 @@ void MPC_dist::totalCycleIndexwHalf(size_t gait, size_t gaitCycleNum){
 void MPC_dist::generateReferenceTrajectory()
 {
     double c = 550.0, m = 8.0, epsilon = 60, sigma = 1.0;
-    double dth = 1.0, alpha = 150.0, eta = 400.0, dmin = 1.0;
+    double dth = 0.8, alpha = 150.0, eta = 400.0, dmin = 1.0;
     int loopSize = 100000; size_t num_obs = Pobs.cols();
+    const size_t ramp_up_iterations = 1000;
 
     double Ts = TSOPTTICK*0.001/10;
 
@@ -941,10 +945,17 @@ void MPC_dist::generateReferenceTrajectory()
             0,                   0,                   0,   0.929527039758809;
 
 
-    Ae.block(0, 0, 4, 4) = Ad;  // Needs to be extended to generic number of agents case
-    Ae.block(4, 4, 4, 4) = Ad;  // Needs to be extended to generic number of agents case
-    Ae.block(8, 8, 4, 4) = Ad;  // Needs to be extended to generic number of agents case
-    Ae.block(12, 12, 4, 4) = Ad;  // Needs to be extended to generic number of agents case
+    // Ae.block(0, 0, 4, 4) = Ad;  // Needs to be extended to generic number of agents case
+    // Ae.block(4, 4, 4, 4) = Ad;  // Needs to be extended to generic number of agents case
+    // Ae.block(8, 8, 4, 4) = Ad;  // Needs to be extended to generic number of agents case
+    // Ae.block(12, 12, 4, 4) = Ad;  // Needs to be extended to generic number of agents case
+
+    for (int agent = 0; agent < NUMBER_OF_AGENTS; ++agent) 
+    {
+        int blockStartIndex = agent * 4; // Calculate the start index for both row and column
+        Ae.block(blockStartIndex, blockStartIndex, 4, 4) = Ad;
+    }
+
 
     MatrixXd Bd; Bd.setZero(4, 2);
     MatrixXd Be; Be.setZero(4*NUMBER_OF_AGENTS, 2*NUMBER_OF_AGENTS);
@@ -958,15 +969,17 @@ void MPC_dist::generateReferenceTrajectory()
     Be.block(4, 2, 4, 2) = Bd;
     Be.block(8, 4, 4, 2) = Bd;
     Be.block(12, 6, 4, 2) = Bd;
-
-    // cout << "Ae is \n" << Ae << "\n\n\nBe is\n" << Be; cin.get();
-
+    
     // Reference Loop
     MatrixXd q; q.setZero(4*NUMBER_OF_AGENTS, loopSize+1);
     
 
-    q.block(0, 0, 16, 1) << Pstart_(0), Pstart_(1), 0, 0, Pstart_(2), Pstart_(3), 0, 0, Pstart_(4), Pstart_(5), 0, 0, Pstart_(6), Pstart_(7), 0, 0;
-    // cout << "q.first_col = " << q.block(0, 0, 8, 1).transpose(); cin.get(); 
+    // Generic initialization of starting positions and velocities
+    for (int k = 0; k < NUMBER_OF_AGENTS; ++k) {
+        q.block(4*k, 0, 2, 1) = Pstart_.segment(2*k, 2); // Set starting positions for each agent
+        q.block(4*k + 2, 0, 2, 1).setZero(); // Set initial velocities to zero
+    }
+
 
     for (size_t i = 0; i < loopSize; i++)
     {   
@@ -1019,26 +1032,18 @@ void MPC_dist::generateReferenceTrajectory()
                     F_agent = F_agent - 4*epsilon*( (6*pow(sigma, 6))/pow(d_agent, 7) - (12*pow(sigma, 12))/pow(d_agent, 13))*( (qk_p - qk_p_other)/(qk_p - qk_p_other).norm() );
                 }
             }
-            
 
-            // cout << "F_agent = " << F_agent.transpose(); cin.get();
-
-            // cout << "( (6*pow(sigma, 6))/pow(d_agent, 7) - (12*pow(sigma, 12))/pow(d_agent, 13)) = " <<  (6*pow(sigma, 6))/pow(d_agent, 7) - (12*pow(sigma, 12))/pow(d_agent, 13); cin.get();
-            
-            F.block(0 + k*2, 0, 2, 1) = F_att + F_rep + F_agent;
+            F.block(0 + k*2, 0, 2, 1) = (F_att + F_rep + F_agent);
 
             if (d_goal < 0.001)
             {
                 F.block(0 + k*2, 0, 2, 1) = 0*F_att;
             }
         }
-        // cout << "F = " << F.transpose(); cin.get(); 
+        // Scale the force vector during the ramp-up phase
+        double scale_factor = (i < ramp_up_iterations) ? (static_cast<double>(i) / ramp_up_iterations) : 1.0;
 
-        q.col(i+1) = Ae*q.col(i) + Be*F;
-
-        // if (i % 1000 == 0)
-        // cout << "loop " << i << std::endl;
-
+        q.col(i+1) = Ae*q.col(i) + Be*F*scale_factor;
     }
 
     for (size_t i = 0; i < loopSize/40; i++)
@@ -1048,533 +1053,60 @@ void MPC_dist::generateReferenceTrajectory()
 
     MatrixXd Pr; Pr.setZero(8,   loopSize/40);
     MatrixXd Prd; Prd.setZero(8, loopSize/40);
-    
-    // Agent 1
-    Pr.row(0) = q.block(0, 2, 1,  loopSize/40);
-    Pr.row(1) = q.block(1, 2, 1,  loopSize/40);
-    Prd.row(0) = q.block(2, 2, 1, loopSize/40);
-    Prd.row(1) = q.block(3, 2, 1, loopSize/40);
 
-    // Agent 2
-    Pr.row(2) = q.block(4, 2, 1,  loopSize/40);
-    Pr.row(3) = q.block(5, 2, 1,  loopSize/40);
-    Prd.row(2) = q.block(6, 2, 1, loopSize/40);
-    Prd.row(3) = q.block(7, 2, 1, loopSize/40);
+    for (int agent = 0; agent < NUMBER_OF_AGENTS; ++agent) 
+    {
+        int baseRowPr = agent * 2; // Base row for Pr operations
+        int baseRowPrd = agent * 2; // Base row for Prd operations
+        int baseRowQ = agent * 4; // Base row for q.block operations
 
-    // Agent 3
-    Pr.row(4) = q.block(8, 2, 1,  loopSize/40);
-    Pr.row(5) = q.block(9, 2, 1,  loopSize/40);
-    Prd.row(4) = q.block(10, 2, 1, loopSize/40);
-    Prd.row(5) = q.block(11, 2, 1, loopSize/40);
+        Pr.row(baseRowPr) = q.block(baseRowQ, 2, 1, loopSize / 40);
+        Pr.row(baseRowPr + 1) = q.block(baseRowQ + 1, 2, 1, loopSize / 40);
+        Prd.row(baseRowPrd) = q.block(baseRowQ + 2, 2, 1, loopSize / 40);
+        Prd.row(baseRowPrd + 1) = q.block(baseRowQ + 3, 2, 1, loopSize / 40);
+    }
 
-    // Agent 4
-    Pr.row(6) = q.block(12, 2, 1,  loopSize/40);
-    Pr.row(7) = q.block(13, 2, 1,  loopSize/40);
-    Prd.row(6) = q.block(14, 2, 1, loopSize/40);
-    Prd.row(7) = q.block(15, 2, 1, loopSize/40);
-
-    // Pr_ = Pr;
-    // Prd_ = Prd;
-
-    // for (size_t i = 0; i < NAgents; i++)
-    // {
-    //     Pr.block(2*i,k+1,2,1) = q.block(4*i,k+1,2,1);
-    //     Prd.block(2*i,k+1,2,1) = q.block(4*i+2,k+1,2,1);
-    // }
-
-    // =================== PROVIDE CUSTOM REFERENCE =========================== //
-
-    // for (int i = 0; i < Pr.cols(); i++)
-    // {
-    //     // Pr.block(0, i, 4, 1) << 0 + 0.001*i, 0 - 0.001*i, 0 + 0.001*i, 0.001*i-1.5;
-    //     // Prd.block(0, i, 4, 1) << 0.05, -0.05, 0.05, 0.05; 
-    //     // Go straight - agent 1
-    //     double step_x1 = 0.005*2; double step_dx1 = 0.1*2;
-    //     double step_x2 = 0.005; double step_dx2 = 0.1;
-
-    //     Pr.block(0, i, 4, 1) << 0 + step_x1*(1-exp(-0.1*i))*i, 0 - step_x1*(1-exp(-0.1*i))*i, 0 + step_x1*(1-exp(-0.1*i))*i, + step_x1*(1-exp(-0.1*i))*i-0.75;
-    //     Prd.block(0, i, 4, 1) << step_dx1*(1-exp(-0.1*i)), -step_dx1*(1-exp(-0.1*i)), step_dx1*(1-exp(-0.1*i)), step_dx1*(1-exp(-0.1*i));
-    // }
-    // // ======= END ======= PROVIDE CUSTOM REFERENCE =========== END =========== //
-
-
-    
 
     Pr_refined_ = Pr;
     Prd_refined_ = Prd;
     
+    // =========================================================================//
+    // ================================= LOGGING ===============================//
+    // =========================================================================//
+
+    // Step back one directory from the current working directory
+    std::filesystem::path baseDir = std::filesystem::current_path().parent_path();
+    std::filesystem::path outputsDir = baseDir / "Sim_Outputs";
+
+    // Check if the Sim_Outputs directory exists, and create it if it doesn't
+    if (!std::filesystem::exists(outputsDir)) {
+        std::filesystem::create_directories(outputsDir);
+    }
+
+    // Log HL Path
+    std::filesystem::path filePath = outputsDir / "HLPath.txt";
     std::fstream myfile5;
-    myfile5.open("///home/hdsrl7/Desktop/A1_RaiSim_Outputs/RefTrajMPC.txt",std::fstream::out); //_EXPE_" + std::to_string(log_ID) + "
-    myfile5 << Pr_refined_;
-    myfile5.close();
+    myfile5.open(filePath, std::fstream::out);
+    if (!myfile5.is_open()) {
+        std::cerr << "Failed to open file: " << filePath << std::endl;
+        // Handle error, possibly exit the function or program
+    } else {
+        myfile5 << Pr_refined_;
+        myfile5.close();
+    }
 
+    // Log HL Velocity
+    filePath = outputsDir / "HLVelocity.txt";
     std::fstream myfile6;
-    myfile6.open("///home/hdsrl7/Desktop/A1_RaiSim_Outputs/VelTrajMPC.txt",std::fstream::out);
-    myfile6 << Prd_refined_;
-    myfile6.close();
-
-
-    // cout << "Can we reach here???????"; cin.get();
+    myfile6.open(filePath, std::fstream::out);
+    if (!myfile6.is_open()) {
+        std::cerr << "Failed to open file: " << filePath << std::endl;
+        // Handle error, possibly exit the function or program
+    } else {
+        myfile6 << Prd_refined_;
+        myfile6.close();
+    }
 }
-
-
-// double MPC_dist::dist(Vector2d qk_p, Vector2d oi)
-// {
-//     Vector2d dist; dist.setZero();
-//     dist = qk_p - oi;
-//     return (double)(dist.norm());
-// }
-
-// void MPC_dist::generateReferenceTrajectory()
-// {
-//     //std::cout << "In generateReferenceTrajectory DBG\n\n"; std::cin.get();
-//     // Define Reference System and Environment
-//     const int NAgents = NUMBER_OF_AGENTS;
-    
-//     int num_obs = 9;
-//     Eigen::Matrix<double, 2*NAgents,1> Pdes;
-//     Eigen::Matrix<double, 2,1> Pdes_tmp;
-//     Eigen::Matrix<double, 2*NAgents, 1> Pstart;
-//     //Pstart << -3,3,-2,3,-1,3,-1,2,-2,2,0,0,0,0,0,0,0,0,0,0;
-//     Pstart = Pstart_;
-
-//     Eigen::MatrixXd Pr;
-//     Eigen::MatrixXd Prd;
-//     Eigen::MatrixXd q;
-
-//    // Pdes_tmp << 2+3, -3-3;
-//     Pdes_tmp << GOAL_X, GOAL_Y;
-//     // Pobs << 3+3, -3+3, 2+3, 0+3, -3+3, -1+3, -1+3, 0+3, 2+3,
-//     //         -1-3, -1-3, -1-3,-2-3, 0-3,-2-3, -0.1-3, 2-3+1, 1-3;
-//     // Pobs <<  5,  3.0,  3,    4,  3,  3.0,  3.0,  5,  3,
-//     //         -2, -1.5, -1,   -1, -3.0, -3.5, -4.0, -2.5, 0;
-
-//     for(int i = 0; i < NAgents; i++)
-//     {
-//         Pdes.block(2*i,0,2,1) = Pdes_tmp;
-//     }
-
-    
-
-//     const float Fr_agents = 3.3;
-//     const float Fac = 6;
-//     const float Frc = 10;
-//     const float W = 0.6;
-//     const float n = 2.3;
-//     const float E = 0.001;
-//     float Ts_opt = TSOPTTICK*0.001/8;
-//     float vr_max = 0.3;
-
-//     // float m = (2*E)/(pow(vr_max,2));
-//     // float c = Fac/vr_max;
-//     float m;
-//     float c;
-
-//     Eigen::Matrix<double, 4, 4> A;
-//     Eigen::Matrix<double, 4, 2> B;
-
-//     Eigen::Matrix<double, 4, 4> Ad;
-//     Eigen::Matrix<double, 4, 2> Bd;
-
-//     Eigen::Matrix<double, 4, 4> Ad_lowc;
-//     Eigen::Matrix<double, 4, 2> Bd_lowc;
-
-
-//     A.setZero(4,4);
-//     B.setZero(4,2);
-//     Ad.setZero(4,4);
-//     Bd.setZero(4,2);
-//     Ad_lowc.setZero(4,4);
-//     Bd_lowc.setZero(4,2);
-
-//     // c = 1200 
-//     Ad <<  1, 0, 0.0042, 0,
-//                 0, 1, 0, 0.0042,
-//                 0, 0, 0.5802, 0,
-//                 0, 0, 0, 0.5802;
-
-//     Bd <<  0.0000022, 0,
-//                 0, 0.0000022,
-//                 0.0008395, 0,
-//                 0, 0.0008395;  
-
-//     Ad_lowc <<  1, 0, 0.0047, 0,
-//                 0, 1, 0, 0.0047,
-//                 0, 0, 0.7655, 0,
-//                 0, 0, 0, 0.7655;
-
-//     Bd_lowc <<  0.0000025, 0,
-//                 0, 0.0000025,
-//                 0.0009379, 0,
-//                 0, 0.0009379;  
-
-//     Eigen::Matrix<double, 4*NAgents, 4*NAgents> A_big;   
-//     Eigen::Matrix<double, 4*NAgents, 2*NAgents> B_big;
-//     Eigen::Matrix<double, 4*NAgents, 4*NAgents> A_big_l;   
-//     Eigen::Matrix<double, 4*NAgents, 2*NAgents> B_big_l;
-
-//     A_big.setZero(); B_big.setZero(); A_big_l.setZero(); B_big_l.setZero();
-
-
-//     for(int i = 0; i < NAgents; i++)
-//     {
-//         A_big.block(i*4,i*4,4,4) = Ad;
-//     }
-
-//     for(int i = 0; i < NAgents; i++)
-//     {
-//         B_big.block(i*4,i*2,4,2) = Bd;
-//     }
-
-//     for(int i = 0; i < NAgents; i++)
-//     {
-//         A_big_l.block(i*4,i*4,4,4) = Ad_lowc;
-//     }
-
-//     for(int i = 0; i < NAgents; i++)
-//     {
-//         B_big_l.block(i*4,i*2,4,2) = Bd_lowc;
-//     }
-
-//     // Reference Traj total points 
-//     int pts_for_ref = 4000;
-//     Pr.setZero(2*NAgents,pts_for_ref+1);
-//     Prd.setZero(2*NAgents,pts_for_ref+1);
-//     q.setZero(4*NAgents,pts_for_ref+1);
-
-//     Pr.block(0,0,2*NAgents,1) = Pstart.block(0,0,2*NAgents,1);
-//     Prd.block(0,0,2*NAgents,1) << 0, 0, 0, 0;
-
-//     Eigen::Matrix<double, 4, 1> q_tmp;
-//     q_tmp.setZero();
-//     char tmp;
-
-
-//     // Initial Conditions for the reference system 
-//     for(int i = 0; i < NAgents; i++)
-//     {
-//         q_tmp << Pr.block(2*i,0,2,1), Prd.block(2*i,0,2,1); //Prd.block(2*i,0,2,1)
-//         //q.block(4*i,0,4,1) << Pstart_(), 0, 0, 0;
-//         q_tmp.setZero(); 
-//     }
-
-//     q.block(0,0,8,1) << Pstart_(0), Pstart_(1), 0, 0, Pstart_(2), Pstart_(3), 0, 0;
-
-//     Eigen::Matrix<double, NAgents, 1> d_des;    
-//     Eigen::Matrix<double, NAgents, 9> d_obs;
-//     d_obs.setZero();
-
-
-//     Eigen::Matrix<double, NAgents, 9> d_obs_scaled;
-//     d_obs_scaled.setZero();
-//     d_des.setZero();
-//     Eigen::MatrixXd Fa;
-//     Fa.setZero(2*NUMBER_OF_AGENTS,pts_for_ref);
-//     Eigen::MatrixXd Fr;
-//     Fr.setZero(2*NUMBER_OF_AGENTS,pts_for_ref);
-
-//     // // Reference calculation loop
-//     for(int k = 0; k< pts_for_ref; k++)
-//     {
-//         //Calculate distance to destination from each agent
-//         for (size_t j = 0; j < NAgents; j++)
-//         {
-//             Eigen::Matrix<double, 2, 1> diff_tmp;
-//             diff_tmp.setZero();
-//             diff_tmp << Pdes.block(2*j,0,2,1)-Pr.block(2*j,k,2,1);
-//             d_des(j) = diff_tmp.norm();
-//         }
-//         // Calculate distance of jth agent from ith obstacle
-//         for (size_t i = 0; i < num_obs; i++)
-//         {
-//             for (size_t j = 0; j < NAgents; j++)
-//             {
-//                 Eigen::Matrix<double, 2, 1> diff_tmp;
-//                 diff_tmp.setZero();
-//                 Eigen::Matrix<double, 2, 1> diff_tmp_scaled;
-//                 diff_tmp_scaled.setZero();
-//                 diff_tmp << Pobs.col(i)-Pr.block(2*j,k,2,1);
-//                 diff_tmp_scaled << Pobs.col(i)-Pr.block(2*j,k,2,1);
-
-//                 float alpha = 0.8;
-//                 float beta = 1.7; 
-//                 diff_tmp_scaled(0) = alpha*diff_tmp_scaled(0);
-//                 diff_tmp_scaled(1) = beta*diff_tmp_scaled(1);
-//                 d_obs(j,i) = diff_tmp.norm();
-//                 d_obs_scaled(j,i) = diff_tmp_scaled.norm();
-//             }
-//         }
-//         // Calculate Attractive force on Jth agent due to destination
-//         for (size_t j = 0; j < NAgents; j++)
-//         {   
-//             Eigen::Vector2d goal_vec = Pdes.block(2*j,0,2,1)-Pr.block(2*j,k,2,1); 
-//             Fa.block(2*j,k,2,1) = 70*(goal_vec)/goal_vec.norm();
-//         }
-
-//         // Rpulsive Forces due to obstacles at time step k
-//         for (size_t i = 0; i < num_obs; i++)
-//         {
-//             for (size_t j = 0; j < NAgents; j++)
-//             {
-//                 Eigen::Matrix<double, 2, 1> diff_tmp;
-//                 diff_tmp << Pobs.col(i)-Pr.block(2*j,k,2,1);
-
-//                 diff_tmp << exp(-3.2*d_obs_scaled(j,i)+6 )*((diff_tmp)/d_obs(j,i));
-
-            
-//                 double scalar = 0;
-//                 if (diff_tmp.norm() > 60)
-//                 {
-//                     scalar = 60/diff_tmp.norm();
-//                 }
-//                 else
-//                 {
-//                     scalar = 1;
-//                 }
-//                 Fr.block(2*j,k,2,1) += scalar*diff_tmp;
-//             }
-//         }
-//         // Forces on Agent j due to Agent i
-//         for (size_t j = 0; j < NAgents; j++)
-//         {
-//             for (size_t i = 0; i < NAgents; i++)
-//             {
-//                 if(j!=i)
-//                 {
-//                     Eigen::Matrix<double, 2, 1> diff_tmp;
-//                     Eigen::Matrix<double, 2, 1> F_tmp;
-//                     Eigen::Matrix<double, 2, 1> d;
-//                     diff_tmp.setZero();
-//                     F_tmp.setZero();
-//                     d.setZero();
-
-//                     diff_tmp << Pr.block(2*j,k,2,1)-Pr.block(2*i,k,2,1);
-
-//                     float alpha = 0.99;
-//                     float beta = 0.95; 
-//                     diff_tmp(0) = alpha*diff_tmp(0);
-//                     diff_tmp(1) = beta*diff_tmp(1);
-
-//                     double dist_mag = diff_tmp.norm();
-
-//                     d = diff_tmp/dist_mag;
-//                     //F_tmp << Fr_agents*d*pow((3*dist_mag-4.0),3);
-//                     double sigma = 0.8; double epsilon = 3;
-//                     F_tmp   << 4*d*epsilon*( 6*(pow(sigma, 6)/pow(dist_mag, 7)) - 12*(pow(sigma, 7)/pow(dist_mag, 13)) );
-
-//                     if(F_tmp.norm() > 100)
-//                         F_tmp = 100*(F_tmp/F_tmp.norm());
-
-//                     Fr.block(2*j,k,2,1) += F_tmp;   
-//                 }
-//             }
-//         }
-
-//         Eigen::Matrix<double, 2*NAgents, 1> u;
-//         u.setZero();
-//         u = Fa.col(k)-Fr.col(k);
-
-//     //     // Update dynamics 
-//         // MatrixXd tmpq; tmpq.setZero(8,1);
-//         // damping control
-//         bool low_damping = (k > 200) ? 1 : 0;
-        
-//         if (low_damping)
-//         {
-//             q.block(0,k+1, 4*NAgents, 1) = A_big_l*q.block(0,k, 4*NAgents, 1) + B_big_l*u; 
-//         }
-//         else{
-//             q.block(0,k+1, 4*NAgents, 1) = A_big*q.block(0,k, 4*NAgents, 1) + B_big*u; 
-//         }
-//         // q.block(0,k+1, 4*NAgents, 1) << tmpq;
-
-//         for (size_t i = 0; i < NAgents; i++)
-//         {
-//             Pr.block(2*i,k+1,2,1) = q.block(4*i,k+1,2,1);
-//             Prd.block(2*i,k+1,2,1) = q.block(4*i+2,k+1,2,1);
-//         }
-//     }
-
-//     // =============================================================================================
-//     //Prd.block(0,0,Prd.rows(),100) = 0.01*Prd.block(0,0,Prd.rows(),100); 
-//     // ref=0
-
-//     // =================== PROVIDE CUSTOM REFERENCE =========================== //
-
-//     // for (int i = 0; i < Pr.cols(); i++)
-//     // {
-//     //     // Pr.block(0, i, 4, 1) << 0 + 0.001*i, 0 - 0.001*i, 0 + 0.001*i, 0.001*i-1.5;
-//     //     // Prd.block(0, i, 4, 1) << 0.05, -0.05, 0.05, 0.05; 
-//     //     // Go straight - agent 1
-//     //     double step_x1 = 0.005*2; double step_dx1 = 0.1*2;
-//     //     double step_x2 = 0.005; double step_dx2 = 0.1;
-
-//     //     Pr.block(0, i, 4, 1) << 0 + step_x1*(1-exp(-0.1*i))*i, 0 - step_x1*(1-exp(-0.1*i))*i, 0 + step_x1*(1-exp(-0.1*i))*i, + step_x1*(1-exp(-0.1*i))*i-0.75;
-//     //     Prd.block(0, i, 4, 1) << step_dx1*(1-exp(-0.1*i)), -step_dx1*(1-exp(-0.1*i)), step_dx1*(1-exp(-0.1*i)), step_dx1*(1-exp(-0.1*i));
-//     // }
-//     // ======= END ======= PROVIDE CUSTOM REFERENCE =========== END =========== //
-
-//     c = 4500.0;  m = 8.0; double epsilon = 1.0, sigma = 0.75;
-//     double dth = 1.0, alpha = 100.0, eta = 200.0, dmin = 2.0;
-//     int loopSize = 100000; num_obs = Pobs.cols();
-
-//     double Ts = TSOPTTICK*0.001/10;
-
-//     // MatrixXd Ad; 
-//     Ad.setZero(4, 4);
-//     MatrixXd Ae; 
-//     Ae.setZero(8, 8);
-
-//     Ad <<   1,                   0,   0.001021788129226,                   0,
-//             0,                   1,                   0,   0.001021788129226,
-//             0,                   0,   0.923365890308039,                   0,
-//             0,                   0,                   0,   0.923365890308039;
-
-//     Ae.block(0, 0, 4, 4) = Ad;
-//     Ae.block(4, 4, 4, 4) = Ad;
-
-//     // MatrixXd Bd; 
-//     Bd.setZero(4, 2);
-//     MatrixXd Be; Be.setZero(8, 4);
-
-//     Bd <<   0.000000067853117956,                   0,
-//             0,                   0.000000067853117956,
-//             0.000127723516153268,                   0,
-//             0,                   0.000127723516153268;
-
-//     Be.block(0, 0, 4, 2) = Bd;
-//     Be.block(4, 2, 4, 2) = Bd;
-
-//     // cout << "Ae is \n" << Ae << "\n\n\nBe is\n" << Be; cin.get();
-
-//     // Reference Loop
-//     // MatrixXd q; 
-//     q.setZero(8, loopSize);
-    
-
-//     q.block(0, 0, 8, 1) << Pstart_(0), Pstart_(1), 0, 0, Pstart_(2), Pstart_(3), 0, 0;
-//     // cout << "q.first_col = " << q.block(0, 0, 8, 1).transpose(); cin.get(); 
-
-//     for (size_t i = 0; i < loopSize; i++)
-//     {   
-//         Vector4d F; F.setZero();
-//         // for each agent
-//         for (size_t k = 0; k <= 1; k++)     
-//         {
-//             // Initialized required variables
-//             Vector2d qk_p, qk_p_other, p_g, F_att, F_rep, F_agent; qk_p.setZero(); qk_p_other.setZero(); p_g.setZero(); F_att.setZero(); F_rep.setZero(); F_agent.setZero(); 
-//             VectorXd d_obs; d_obs.setZero(9);
-//             double d_goal = 0.0, d_agent = 0.0;
-
-//             // Index current and other agent positions
-//             qk_p = q.block(0+k*4, i, 2, 1);
-//             qk_p_other = q.block(0+(!k)*4, i, 2, 1);
-
-
-//             // cout << "qk_p = " << qk_p.transpose(); cin.get(); 
-//             // cout << "qk_p_other = " << qk_p_other.transpose(); cin.get();
-
-//             // Goal point
-//             p_g << GOAL_X, GOAL_Y;
-//             // cout << "p_g = " << p_g.transpose(); cin.get();
-
-//             // Distance from goal
-//             d_goal = (qk_p - p_g).norm();
-//             // cout << "d_goal = " << d_goal; cin.get();
-
-//             // Attractive Force
-//             F_att = -alpha*((qk_p - p_g)/(qk_p - p_g).norm());
-//             // cout << "F_att = " << F_att.transpose(); cin.get();
-
-//             // Distance from Obstacle
-//             for (size_t j = 0; j < num_obs; j++)
-//             {
-//                 d_obs(j) = (qk_p - Pobs.col(j)).norm();
-//             }
-//             //cout << "d_obs = " << d_obs.transpose();// cin.get();
-
-
-//             // Distance form other agent
-//             d_agent = (qk_p - qk_p_other).norm();
-//             // cout << "d_agent = " << d_agent; cin.get();
-
-//             // Repulsive Force due to obstacles
-//             Vector2d F_tmp; F_tmp.setZero();
-//             for (size_t j = 0; j < num_obs; j++)
-//             {
-//                 if (d_obs(j) < dmin)
-//                 {
-//                     F_tmp += eta*(1/d_obs(j) - 1/dmin)*(1/pow(d_obs(j), 2))*((qk_p - Pobs.col(j))/(qk_p - Pobs.col(j)).norm());
-//                 }
-//             }
-//             F_rep = F_tmp;
-//             //cout << "\nF_rep = " << F_rep.transpose(); cin.get();
-
-//             // Lennard Jones Potential
-//             F_agent = -4*epsilon*( (6*pow(sigma, 6))/pow(d_agent, 7) - (12*pow(sigma, 12))/pow(d_agent, 13))*( (qk_p - qk_p_other)/(qk_p - qk_p_other).norm() );
-//             // cout << "F_agent = " << F_agent.transpose(); cin.get();
-
-//             // cout << "( (6*pow(sigma, 6))/pow(d_agent, 7) - (12*pow(sigma, 12))/pow(d_agent, 13)) = " <<  (6*pow(sigma, 6))/pow(d_agent, 7) - (12*pow(sigma, 12))/pow(d_agent, 13); cin.get();
-            
-//             F.block(0 + k*2, 0, 2, 1) = F_att + F_rep + F_agent;
-
-//             if (d_goal < 0.001)
-//             {
-//                 F.block(0 + k*2, 0, 2, 1) = 0*F_att;
-//             }
-//         }
-//         // cout << "F = " << F.transpose(); cin.get(); 
-
-//         q.col(i+1) = Ae*q.col(i) + Be*F;
-//     }
-
-//     for (size_t i = 0; i < loopSize/40; i++)
-//     {
-//         q.col(i) = q.col(40*i);
-//     }
-
-//     // MatrixXd Pr; 
-//     Pr.setZero(4, loopSize/40);
-//     // MatrixXd Prd;
-//     Prd.setZero(4, loopSize/40);
-    
-//     // Agent 1
-//     Pr.row(0) = q.block(0, 0, 1, loopSize/40);
-//     Pr.row(1) = q.block(1, 0, 1, loopSize/40);
-//     Prd.row(0) = q.block(2, 0, 1, loopSize/40);
-//     Prd.row(1) = q.block(3, 0, 1, loopSize/40);
-
-//     // Agent 2
-//     Pr.row(2) = q.block(4, 0, 1, loopSize/40);
-//     Pr.row(3) = q.block(5, 0, 1, loopSize/40);
-//     Prd.row(2) = q.block(6, 0, 1, loopSize/40);
-//     Prd.row(3) = q.block(7, 0, 1, loopSize/40);
-
-//     Pr_refined_ = Pr;
-//     Prd_refined_ = Prd;
-    
-
-//     // cout << Pr_refined_.block(1,0,1,100) << std::endl; cout << "\n\n\n\n";
-//     // cout << Pr_refined_.block(3,0,1,100) << std::endl; std::cin.get();
-
-//     // Pr_refined_.block(0,0, Pr.rows(), 1) = Pr.block(0,1, Pr.rows(), 1);
-//     // Prd_refined_.block(0,0, Pr.rows(), 1) = Prd.block(0,1, Pr.rows(), 1);
-//     // refzero
-//     // Pr_refined_ = Pr.setZero();
-//     // Prd_refined_ = Prd.setZero();
-
-//     std::fstream myfile5;
-//     myfile5.open("///home/hdsrl7/Desktop/A1_RaiSim_Outputs/RefTrajMPC_EXPE_" + std::to_string(log_ID) + ".txt",std::fstream::out);
-//     myfile5 << Pr_refined_;
-//     myfile5.close();
-
-//     std::fstream myfile6;
-//     myfile6.open("///home/hdsrl7/Desktop/A1_RaiSim_Outputs/VelTrajMPC_EXPE_" + std::to_string(log_ID) + ".txt",std::fstream::out);
-//     myfile6 << Prd_refined_;
-//     myfile6.close();
-// }
-
-
 
 void MPC_dist::setPstart(Eigen::Matrix<double, 2*NUMBER_OF_AGENTS, 1>& Pstart)
 {

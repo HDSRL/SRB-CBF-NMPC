@@ -21,7 +21,7 @@
 #include "shared_structs.hpp"
 
 bool rough_terrain_en = 0;
-bool obstacle_en = 0;
+bool obstacle_en = 1;
 
 using std::cout;
 using std::cin;
@@ -48,8 +48,6 @@ sharedData HLData0_Backup, LLData0_Backup;
 sharedData HLData1_Backup, LLData1_Backup;
 sharedData HLData2_Backup, LLData2_Backup;
 sharedData HLData3_Backup, LLData3_Backup;
-
-
 
 
 void setupCallback() {

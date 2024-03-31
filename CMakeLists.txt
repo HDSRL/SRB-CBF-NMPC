@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 project(A1_Robot VERSION 1.1.1)
 set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_FLAGS "-O3 -fopenmp -std=c++14 -ggdb")
+set(CMAKE_CXX_FLAGS "-O3 -fopenmp -std=c++17 -ggdb")
 set(OGRE_DIR "/home/basit/workspace/raisimLib/build/lib/OGRE/cmake/")
 
 set(LL_DIR ${CMAKE_CURRENT_SOURCE_DIR})
