@@ -1,0 +1,6 @@
+function F = calculate_F(k)
+
+F = [k', zeros(1,3),zeros(1,3);...
+     zeros(1,3),k',zeros(1,3);...
+     zeros(1,3),zeros(1,3),k'];
+end

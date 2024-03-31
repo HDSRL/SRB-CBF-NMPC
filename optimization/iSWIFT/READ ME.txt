@@ -1,0 +1,24 @@
+// iSwift - Light Weight Interior Point QP solver
+// Copyright (C) Abhishek Pandala [pandala2@illinois.edu], Hae Won Park [haewon@illinois.edu], Yanran Ding [yding35@illinois.edu]
+// Dynamic Robotics Lab, Department of Mechanical Science and Engineering, University of Illinois at Urbana - Champaign, USA
+
+
+// QP form
+// 0.5*x'Px + c'x
+// s.t Gx <= h
+// 	  Ax=b
+
+
+
+-> Source Code is placed in $INSTDIR$/src
+-> Header Files are placed in $INSTDIR$/include
+-> Solver relies on external package SuiteSparse(LDL) placed in $INSTDIR$/ldl
+-> ldl package is slightly modified to accommodate dynamic regularization
+-> Matlab Source Code is placed in $INSTDIR$/Source Code Matlab
+-> Few Examples Based on MPC Formulation are located in $INSTDIR$/Examples
+-> Documentation can be found in $INSTDIR$/docs
+
+
+// Note
+-> The solver performs no error checking and requires the user to input matrices of correct size and data-type
+-> Solver needs permutation vector as input (usually obtained from AMD or other reordering techniques)

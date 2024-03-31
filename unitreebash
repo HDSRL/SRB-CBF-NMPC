@@ -1,0 +1,5 @@
+export UTIP="192.168.123.161"
+export UTUN="unitree"
+utssh(){
+    ssh $UTUN@$UTIP
+}

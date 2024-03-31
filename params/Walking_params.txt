@@ -1,0 +1,18 @@
+0.28
+0.125
+0.0
+0.0
+0.0
+0
+
+
+// =========================================== //
+// ======= Ordering and default values ======= //
+// =========================================== //
+standHeight = 0.28;
+h_swing = 0.12;
+fwdSpeed = 0.0;
+latSpeed = 0.0;
+yawSpeed = 0.0; // NOT IMPLEMENTED IN CODE YET, ONLY PARAMS
+neverStopTrot = 1;
+

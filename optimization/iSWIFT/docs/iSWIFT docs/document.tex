@@ -1,0 +1,175 @@
+
+
+\title{iSWIFT - Documentation}
+\author{
+        Abhishek Pandala, Yanran Ding, Hae-Won Park
+}
+\date{\today}
+
+\documentclass[10pt]{article}
+
+% packages
+\usepackage{amsmath}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage[makeroom]{cancel}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{amsmath}		% For \begin{bmatrix}
+\interdisplaylinepenalty=2500		% Allow pagebreaks in multi-line equations
+\usepackage{amsfonts}		% For \mathbb R wih the double line, etc.
+\usepackage{url}				% For url links (esp.  in the bibtex entries)  eg: \url{my_url_here}
+\usepackage{here}				% For [h] in figures - places figures "here"
+\usepackage{color}			% For \textcolor
+\usepackage{balance}    % Balance last page columns
+\usepackage{float}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[]{algorithm2e}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+\usepackage{scalerel}
+\usepackage{amssymb}
+\usepackage{listings}
+
+
+\graphicspath{{../figs/}}
+
+\begin{document}
+	
+\maketitle
+
+
+\section{Introduction}\label{sec:intro}
+		iSWIFT is a small-scale quadratic programming solver written in ANSI C. It is programmed to solve QP’s of the following form
+\begin{subequations}\label{eq:QP_primal}
+	\begin{align}
+		\text{minimize} \ & \frac{1}{2} \bm{x}^{T}\bm{P}\bm{x} + \bm{c}^{T}\bm{x} \\
+		\text{subject to} \ & \bm{A}\cdot\bm{x}=\bm{b}\\
+		& \bm{G}\cdot\bm{x} \leq \bm{h}
+	\end{align}
+\end{subequations}
+It is assumed that the matrix $P$ is symmetric positive definite and matrix $A$ has full row rank.
+\section{Code Organization}
+	iSWIFT is organised into the following source files listed in \$...\textbackslash src\$ folder
+	\begin{itemize}
+		 \setlength{\itemsep}{1pt}%
+		\setlength{\parskip}{0pt}%
+		\item Prime.c - Contains three major functions needed by the QP solver (outlined in \ref{c_usage})
+		\item Auxilary.c - Contains all the auxilary functions needed by the three major functions in Prime.c
+		\item timer.c - Contains functions needed to time events in the QP solver; similar to tic,toc functions in matlab
+		\item RUNQP.c - Contains a sample implementation of QP solver
+	\end{itemize}
+	
+	The following header files can be found in \$...\textbackslash include\$ folder
+\begin{itemize}
+	 \setlength{\itemsep}{1pt}%
+	\setlength{\parskip}{0pt}%
+	\item GlobalOptions.h - Contains all the settings and exit flags of the QP solver
+	\item Prime.h - Contains declarations of all the structures and functions used in iSWIFT
+	\item timer.h - Contains declarations of functions in timer.c
+	\item Matrices.h - Contains sample input data to run QP solver
+\end{itemize}
+	Apart from these files, there is also an LDL package in \$...\textbackslash ldl\$ which performs the Cholesky factorization and solves the linear system of equations. In the \$...\textbackslash matlab\$ folder, we have two simulink files Swift\_sfunc\_e.c and Swift\_sfunc.c and one matlab cmex file Swift\_cmex.c. To build each of these functions, call the function Swift\_mex.m with the filename as argument. For example, to build Swift\_sfunc.c use the following command Swift\_mex('Swift\_sfunc').
+\section{Usage}
+\subsection{C/C++}\label{c_usage}
+iSWIFT has the following three main functions listed in Prime.c file.
+\subsubsection{\text{QP\_SETUP}}
+This function takes as input the following arguments
+\begin{itemize}
+	 \setlength{\itemsep}{1pt}%
+	 \setlength{\parskip}{0pt}%
+	\item $n$ = no. of decision variables
+	\item $m$ = no. of inequality constraints
+	\item $p$ = no. of equality constraints
+	\item $Pjc$, $Pir$, $Ppr$ correspond to P matrix in CCS format
+	\item $Ajc$, $Air$, $Apr$ correspond to A matrix in CCS format
+	\item $Gjc$, $Gir$, $Gpr$ correspond to G matrix in CCS format
+	\item $c$ = column vector in cost function
+	\item $h$ = right hand side of inequality constraint matrix
+	\item $b$ = right hand side of equality constraint matrix
+	\item $sigma\_d$ = centering parameter (chosen as $0$)
+	\item $Permut$ = permutation vector
+\end{itemize}
+	With these arguments, the function creates a structure $QP$ and also determines the initial starting points $x_0,y_0,z_0$ and $s_0$ for the algorithm. In the absence of  equality constraints, one can set either $p$ to $0$ or any of the pointers corresponding to $Ajc, Air, Apr, b$ to NULL. The time taken by this function can be found via setup\_time.
+\subsubsection{\text{QP\_SOLVE}}
+This function takes as argument the structure $QP$ created by $\text{QP\_SETUP}$ and performs the following tasks
+\begin{itemize}
+	\setlength{\itemsep}{1pt}%
+	\setlength{\parskip}{0pt}%
+	\item Check the termination criterion
+	\item Perform Mehrotra Predictor Corrector steps
+	\item Update the primal and dual variables
+\end{itemize}
+
+The algorithm terminates when either the residuals and duality gap are within the tolerance values or when the maximum number of iterations are reached. The time taken by this function can be found via solve\_time. The total time taken by the solver is the sum of setup\_time and solve\_time.
+
+\subsubsection{\text{QP\_CLEAN}}
+This function cleans all the memory allocated by QP\_SETUP function. Make sure all the information (including solution and stats) is extracted before calling this function. \\
+
+A sample implementation is outlined in RUNQP.c file.
+
+\subsection{Simulink}
+ iSWIFT has interface with Simulink real-time through gateway S-function. iSWIFT two S-function files Swift\_sfunc\_e.c and Swift\_sfunc.c. The first S-function file is used when equality constraints are present and the second file is used when equality constraints are not present. Each of these functions takes the following input arguments
+ \begin{itemize}
+ 	\setlength{\itemsep}{1pt}%
+ 	\setlength{\parskip}{0pt}%
+ 	\item $P$ - Matrix in dense format
+ 	\item $c$ - column vector in cost function
+ 	\item $A$ - Matrix corresponding to equality constraints (for use in Swift\_sfunc\_e.c file only)
+ 	\item $b$ - Matrix corresponding to right hand side of equality constraint matrix (for use in Swift\_sfunc\_e.c file only)
+ 	\item $G$ - Matrix corresponding to inequality constraints
+ 	\item $h$ - Matrix corresponding to right hand side of inequality constraint matrix
+ 	\item $sigma\_d$ - Centering parameter (chosen as $0$)
+ \end{itemize}
+	Before building these simulink files, two things are to be considered. First, specify the length of the output vector in the macro ``$\#define \quad NV$''. This corresponds to the length of solution vector you want to retrieve from the QP solver. Second, the corresponding permutation vector has to be changed depending on the problem instance before building it using Swift\_mex.m. Upon successful completion, the solver gives the solution vector, iteration count, setup time and solve time respectively.
+\section{Appendix}
+	\subsection{Compressed Column Storage format}
+		iSWIFT operates on sparse matrices stored in Compressed Column Storage format. In this format, an $m \times n$ sparse matrix $A$ that can contain $nnz$ non-zero entries is stored as an integer array of $Ajc$ of length $n+1$, an integer array $Air$ of length $nnz$ and a real array $Apc$ of length $nnz$.
+		\begin{itemize}
+			\setlength{\itemsep}{1pt}%
+			\setlength{\parskip}{0pt}%
+			\item The real array $Apr$ holds all the nonzero entries of $A$ in column major format
+			\item The integer array $Air$ holds the rows indices of the corresponding elements in $Apr$
+			\item The integer array $Ajc$ is defined as 
+			\begin{itemize}
+				\item $Ajc[0]$ = $0$
+				\item $Ajc[i]$ = $Ajc[i-1]$ + number of non-zeros in $i^{th}$ column of A
+			\end{itemize}
+		\end{itemize}
+	For the following sample matrix $A$,
+	\begin{equation}
+	A = 
+	\begin{bmatrix} 
+		4.5 & 0 & 3.2 & 0 \\
+		3.1 & 2.9 & 0 & 2.9 \\
+		0 & 1.7 & 3.0 & 0 \\
+		3.5 & 0.4 & 0 & 1.0
+	\end{bmatrix}
+	\end{equation}		
+	we have the following CCS representation
+	\begin{equation}
+	\begin{aligned}
+	\text{int Ajc} = &\{0,  3,  6,8, 10\} \\
+	\text{int Air} = &\{0,1,3,1,2,3,0,2,1,3\} \\
+	\text{double Apr} = &\{4.5,3.1,3.5,2.9,1.7,0.4,3.2,3.0,2.9,1.0\}
+	\end{aligned}
+	\end{equation}
+	\subsection{Permutation vector}
+		Performing $LDL^T$ factorization on a sparse linear system of equations typically results in fill-in. A fill-in is a non-zero entry in L but not in A. To minimize fill-in, permutation matrices are used and the new system
+			\begin{equation}
+					PAP^T
+			\end{equation}
+			is factorized. Obtaining a perfect elimination ordering (permutation matrix with least fill-in) is an NP-hard problem. Hence, heuristics are used to compute permutation matrices. Some of the popular ones are nested dissection and minimum degree ordering methods. iSWIFT uses the Approximate minimum degree ordering to compute permutation matrix. The user can opt to use other ordering methods as well. The following code snippet helps to compute permutation matrix in Matlab. 
+\begin{lstlisting}
+n = size(P,1);
+m = size(G,1);
+p = size(A,1);
+Phi = [P A' G'; A zeros(p,m + p);G zeros(m,p) -eye(m,m)];
+Permut = amd(Phi) - 1;
+\end{lstlisting}			
+%\bibliographystyle{abbrv}
+%\bibliography{main}
+
+\end{document}

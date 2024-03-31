@@ -1,0 +1,31 @@
+0.7
+400
+40
+0
+1
+0.1
+1000000
+100000000
+100
+0.8
+
+
+// =========================================== //
+// ======= Ordering and default values ======= //
+// =========================================== //
+// Default Low Level
+mu = 0.7;    // coefficient of friction
+kp = 700;   // proportional gain on IO linearization
+kd = 40;    // derivative gain on IO linearization
+useCLF = 1;  // 1 or 0, indicates whether or not to use the CLF 
+
+// QP Cost
+tauPen = 1e0; // input weight
+dfPen  = 1e-1; // ||F-F_d|| weight
+auxPen = 1e6; // auxiliary var weight
+clfPen = 1e8; // clf defect var weight
+
+// QP Constraints
+auxMax = 100;  // max aux value
+clfEps = 0.8; // CLF convergence tuning variable
+

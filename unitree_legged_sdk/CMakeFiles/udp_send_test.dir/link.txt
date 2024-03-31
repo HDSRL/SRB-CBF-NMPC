@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3   CMakeFiles/udp_send_test.dir/examples/multi_pc_udp_send.cpp.o  -o udp_send_test  -L/home/randy/A1_Experiment_Code/unitree_legged_sdk-master/lib -rdynamic -pthread -lunitree_legged_sdk_amd64 -llcm -Wl,-rpath,/home/randy/A1_Experiment_Code/unitree_legged_sdk-master/lib 

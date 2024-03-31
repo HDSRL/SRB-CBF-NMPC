@@ -1,0 +1,4083 @@
+[ 18%] Built target dyn_lib
+[ 25%] Built target restore
+[ 48%] Built target optim_lib
+[ 85%] Built target ctrl_lib
+[ 92%] Built target Basit_Experiment
+[100%] Built target Run_Sim
+UDP Initialized. Port: 8019 
+UDP Initialized. Port: 8021 
+Loading: ../params/LL_w_CLF.txt...
+Loading: ../params/Walking_params.txt...
+Loading: ../params/LL_w_CLF.txt...
+Loading: ../params/Walking_params.txt...
+[Loop Start] named: calc_loop0, period: 1(ms), run at cpu: 1 
+[Loop Start] named: calc_loop1, period: 1(ms), run at cpu: 3 
+[Loop Start] named: mpc_loop0, period: 20(ms), run at cpu: 2 
+[Loop Start] named: mpc_loop1, period: 20(ms), run at cpu: 2 
+OTHER AGENT's STATE (0):   0 0 0 0
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0  DEBUGGING THE CONSTR of NEQ_CONSTR
+0  EXIT DEBUG THE CONSTR of NEQ_CONSTR
+3  DEBG calculate bound value
+3  EXIT DEBG calculate bound value
+3  DEBG calculate bound value
+3  EXIT DEBG calculate bound value
+1  Jacob
+1  EXIT  Jacob
+1  Jacob
+1  EXIT  Jacob
+ ==============================
+   SNOPT C++ interface  2.2.0   5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+******************* MPC OUTPUT ******************* 
+-0.000276787
+  -0.0112772
+ 7.67362e-08
+-1.37782e-06
+-0.000677843
+  -0.0048458
+-2.74831e-07
+ 7.11665e-20
+ -0.00086344
+ -0.00262262
+-1.37928e-07
+-5.04084e-20
+-0.000276787
+ -0.00253805
+-1.37928e-07
+ 1.81282e-22
+deleting mpc_state_eventbased_
+deleted mpc_state_eventbased_
+event based MPC solution done correctly
+Domain is: 0
+OTHER AGENT's STATE (1):   0 0 0 0
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   0    0    0    0
+   0    0    0    0
+-0.5 -0.5 -0.5 -0.5
+   0    0    0    0
+0  DEBUGGING THE CONSTR of NEQ_CONSTR
+0  EXIT DEBUG THE CONSTR of NEQ_CONSTR
+3  DEBG calculate bound value
+3  EXIT DEBG calculate bound value
+3  DEBG calculate bound value
+3  EXIT DEBG calculate bound value
+1  Jacob
+1  EXIT  Jacob
+1  Jacob
+1  EXIT  Jacob
+ ==============================
+   SNOPT C++ interface  2.2.0   5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+1  Jacob
+1  EXIT  Jacob
+5   DEBG calculate constr value
+5.01
+5.02
+5.03
+5   EXIT DEBG calculate constr value
+******************* MPC OUTPUT ******************* 
+-0.000282484
+  -0.0115093
+   -0.500921
+  -0.0375044
+ 0.000373844
+ -0.00624957
+   -0.502403
+  -0.0221642
+ 0.000144115
+ -0.00298989
+   -0.500216
+  -0.0176223
+ 3.09852e-05
+ -0.00156175
+   -0.500983
+  -0.0133028
+deleting mpc_state_eventbased_
+deleted mpc_state_eventbased_
+event based MPC solution done correctly
+Domain is: 0
+DBG: Does this happen? 1
+81.254384
+OTHER AGENT's STATE (0):   0 0 0 0
+0.010744
+DBG: Does this happen? 1
+30.551837
+OTHER AGENT's STATE (1):   0 0 0 0
+0.010164
+OTHER AGENT's STATE (1):   0 0 0 0
+0.027939
+OTHER AGENT's STATE (0):   0 0 0 0
+0.022121
+OTHER AGENT's STATE (1):   0 0 0 0
+0.024306
+OTHER AGENT's STATE (0):   0 0 0 0
+0.033240
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043495
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045595
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065530
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062446
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065804
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064782
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065442
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059261
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064980
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065067
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063238
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063105
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063166
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062748
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064530
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063411
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063988
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065153
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063979
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063161
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065166
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062500
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063159
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062323
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063443
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064518
+OTHER AGENT's STATE (1):   0 0 0 0
+0.078549
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064053
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067799
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063040
+OTHER AGENT's STATE (1):   0 0 0 0
+0.086057
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066620
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065540
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064361
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064136
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063421
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062088
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062544
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065017
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063959
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063436
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064958
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064934
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067343
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061406
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063811
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047408
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038198
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039107
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042536
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042558
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047019
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040113
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041137
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036262
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041892
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063756
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062994
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063569
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074370
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067589
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062531
+OTHER AGENT's STATE (1):   0 0 0 0
+0.066784
+OTHER AGENT's STATE (0):   0 0 0 0
+0.078337
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063137
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059769
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050479
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040250
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060822
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039687
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039392
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036877
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036497
+OTHER AGENT's STATE (0):   0 0 0 0
+0.033641
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044856
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037695
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036607
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036894
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036806
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036895
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039174
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039024
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039997
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036945
+OTHER AGENT's STATE (1):   0 0 0 0
+0.034965
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034372
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037796
+
+Press L1 + start to continue
+
+Press L1 + start to continue
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035311
+OTHER AGENT's STATE (1):   0 0 0 0
+0.033846
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034532
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036252
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034195
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035652
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039938
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064788
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044500
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038394
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035539
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040411
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034193
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036331
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036769
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035593
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035387
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040450
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039515
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035835
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035575
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037620
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035066
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037007
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039888
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057598
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065114
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065395
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063964
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063557
+OTHER AGENT's STATE (0):   0 0 0 0
+0.077208
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063813
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063629
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046091
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040323
+OTHER AGENT's STATE (1):   0 0 0 0
+0.034619
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036577
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036445
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048195
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063780
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059520
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064750
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063870
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063753
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047575
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039390
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037771
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047115
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047017
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038311
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047013
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040669
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043610
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037647
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042329
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041512
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038802
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039511
+OTHER AGENT's STATE (0):   0 0 0 0
+0.053748
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061103
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043867
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058248
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055168
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060657
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055822
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042852
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048544
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049828
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045107
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050270
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062780
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061245
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063365
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063911
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066020
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064844
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063233
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061504
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062727
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062311
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063755
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063646
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063520
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060089
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064701
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062885
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062333
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060743
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064023
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062845
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062352
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062086
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062612
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063647
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062584
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062567
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064320
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062448
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064463
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064687
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061624
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062874
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063067
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048179
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058191
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057190
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040272
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045258
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045593
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041102
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038992
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047430
+OTHER AGENT's STATE (0):   0 0 0 0
+0.027151
+OTHER AGENT's STATE (1):   0 0 0 0
+0.021876
+OTHER AGENT's STATE (0):   0 0 0 0
+0.032479
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043200
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042855
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041030
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040950
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039308
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040407
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039003
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038634
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051987
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040878
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049097
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043127
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045368
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040150
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059985
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054839
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063930
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048962
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057023
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059716
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064241
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044739
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045067
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041941
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040657
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040713
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041766
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065782
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042882
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041873
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038792
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040044
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047956
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047776
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038647
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041440
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057038
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041367
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043816
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039310
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056475
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042346
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039722
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057408
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063775
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062312
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062954
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042640
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061545
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063919
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063057
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066312
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063304
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064445
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064685
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063067
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059137
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058573
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064656
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064380
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058443
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062595
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062318
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062909
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063025
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059159
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064511
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062203
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041338
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039515
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037089
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057143
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064214
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060157
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044500
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044020
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039379
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040331
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036465
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045989
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063843
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063775
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047902
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048947
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053394
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059579
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062422
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048163
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041750
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037792
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040583
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039665
+OTHER AGENT's STATE (1):   0 0 0 0
+0.068326
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061866
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063537
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045523
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048395
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042410
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043380
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042226
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041473
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066444
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050290
+OTHER AGENT's STATE (0):   0 0 0 0
+0.053498
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045175
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065155
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062353
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062140
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062540
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062989
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062528
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063100
+OTHER AGENT's STATE (1):   0 0 0 0
+0.076523
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048247
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046245
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042309
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042417
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040068
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041005
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041226
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040442
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042903
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040727
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039652
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039475
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044783
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043016
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040631
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043228
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040049
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038712
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039911
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045470
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040239
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039225
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037913
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038550
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038925
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038515
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062362
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046171
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043760
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046696
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044230
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042600
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042858
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043357
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040584
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041875
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038556
+OTHER AGENT's STATE (1):   0 0 0 0
+0.066107
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056875
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057760
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042935
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052581
+OTHER AGENT's STATE (0):   0 0 0 0
+0.050969
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051700
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047564
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048572
+OTHER AGENT's STATE (0):   0 0 0 0
+0.046633
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046588
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048507
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043149
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038632
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039802
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039061
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055787
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038586
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051500
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045808
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059529
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044269
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041298
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040882
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040588
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055545
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046235
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042461
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038325
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035983
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037450
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038586
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035803
+OTHER AGENT's STATE (0):   0 0 0 0
+0.053777
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055692
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057961
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051422
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054045
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061930
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056391
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063289
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065118
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061434
+OTHER AGENT's STATE (0):   0 0 0 0
+0.069167
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067412
+OTHER AGENT's STATE (0):   0 0 0 0
+0.080932
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044267
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057832
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044047
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041294
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037268
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036860
+OTHER AGENT's STATE (1):   0 0 0 0
+0.034142
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034041
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035598
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034558
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038027
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035063
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035582
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060050
+OTHER AGENT's STATE (1):   0 0 0 0
+0.054128
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079137
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047134
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058452
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063225
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063605
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064586
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062700
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065450
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063589
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065728
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063300
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063937
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065354
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062753
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062946
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063093
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044672
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037346
+OTHER AGENT's STATE (0):   0 0 0 0
+0.033492
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040760
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041362
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040634
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037129
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037074
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038694
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037397
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034798
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035490
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036126
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035725
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035405
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042963
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068671
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060865
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067808
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063148
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067809
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053627
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038984
+OTHER AGENT's STATE (1):   0 0 0 0
+0.029978
+OTHER AGENT's STATE (0):   0 0 0 0
+0.024882
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037254
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038635
+OTHER AGENT's STATE (1):   0 0 0 0
+0.026350
+OTHER AGENT's STATE (0):   0 0 0 0
+0.030017
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037625
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038033
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046113
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055750
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037232
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039621
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038425
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037793
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037803
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037609
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036585
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037691
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039959
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037761
+OTHER AGENT's STATE (1):   0 0 0 0
+0.054036
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057169
+OTHER AGENT's STATE (1):   0 0 0 0
+0.054374
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040520
+OTHER AGENT's STATE (1):   0 0 0 0
+0.054755
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048395
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056238
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055066
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043585
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055970
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042751
+OTHER AGENT's STATE (0):   0 0 0 0
+0.053383
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058672
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045080
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057522
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054968
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043758
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038336
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050728
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038873
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055862
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039089
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058482
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062451
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061881
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065520
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059524
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059352
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062780
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063927
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059625
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063611
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059408
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060602
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055867
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062664
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062297
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056373
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039348
+OTHER AGENT's STATE (0):   0 0 0 0
+0.052577
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062383
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064494
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056305
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057891
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064869
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066817
+OTHER AGENT's STATE (1):   0 0 0 0
+0.069246
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067871
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062298
+OTHER AGENT's STATE (0):   0 0 0 0
+0.069455
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060553
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065842
+OTHER AGENT's STATE (1):   0 0 0 0
+0.066523
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062213
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059788
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054847
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061659
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068326
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064370
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065120
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061333
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063163
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064689
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063396
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049437
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043607
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050331
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060655
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060034
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061146
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048325
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043647
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040398
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062690
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048983
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055630
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057494
+OTHER AGENT's STATE (0):   0 0 0 0
+0.078773
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058199
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048271
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048125
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067755
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059944
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067355
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059638
+OTHER AGENT's STATE (0):   0 0 0 0
+0.083844
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056827
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062684
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046479
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056524
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041250
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064525
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049925
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057032
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049218
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043621
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046099
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059305
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043684
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056087
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039971
+OTHER AGENT's STATE (0):   0 0 0 0
+0.051571
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045426
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060286
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056974
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058023
+OTHER AGENT's STATE (1):   0 0 0 0
+0.054256
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060613
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048852
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057047
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060770
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070082
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058322
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065180
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058745
+OTHER AGENT's STATE (0):   0 0 0 0
+0.133134
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058679
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054086
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059706
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064187
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062603
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067524
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044875
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045245
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059721
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060484
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055122
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054150
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040465
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062389
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047232
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055130
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045025
+OTHER AGENT's STATE (0):   0 0 0 0
+0.051780
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049372
+OTHER AGENT's STATE (0):   0 0 0 0
+0.052200
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065426
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060541
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059976
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065478
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065008
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059599
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059464
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064020
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062333
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061083
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062968
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061726
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060286
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065539
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060739
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064605
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063731
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062130
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044043
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038430
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042856
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041673
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041327
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043769
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039089
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038342
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038161
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039578
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038478
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035835
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038924
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039088
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042452
+OTHER AGENT's STATE (0):   0 0 0 0
+0.051575
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042587
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040466
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036713
+OTHER AGENT's STATE (0):   0 0 0 0
+0.050337
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040146
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039382
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038170
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044528
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039785
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044844
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039729
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063030
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060302
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063868
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046503
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043561
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052565
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057318
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048442
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055268
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043566
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063409
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056389
+OTHER AGENT's STATE (0):   0 0 0 0
+0.050727
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057744
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062142
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053344
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038873
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037383
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036994
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052584
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059339
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050932
+OTHER AGENT's STATE (0):   0 0 0 0
+0.049076
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065109
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048503
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047454
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045936
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041043
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044562
+OTHER AGENT's STATE (1):   0 0 0 0
+0.054890
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040029
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039281
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037866
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039656
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037289
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041922
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059939
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045724
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042256
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037962
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063970
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049892
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062372
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064053
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045920
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044113
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041123
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038521
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041439
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040232
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044236
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053714
+OTHER AGENT's STATE (0):   0 0 0 0
+0.053208
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052569
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056200
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064645
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059569
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059697
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062704
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064363
+OTHER AGENT's STATE (0):   0 0 0 0
+0.049740
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044250
+OTHER AGENT's STATE (0):   0 0 0 0
+0.046031
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046551
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061925
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051003
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066375
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057570
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060203
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060673
+OTHER AGENT's STATE (0):   0 0 0 0
+0.077850
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056715
+OTHER AGENT's STATE (0):   0 0 0 0
+0.050828
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048112
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045390
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047749
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070012
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062309
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066547
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064150
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060859
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061255
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062776
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062574
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061379
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052486
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063809
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064088
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060833
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063740
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062986
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064205
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062130
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063769
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062351
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064772
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062552
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065473
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062381
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063844
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062051
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063859
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064343
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046953
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042015
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039692
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038134
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037796
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036937
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039033
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039538
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037317
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038119
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038904
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063187
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045937
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079022
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047718
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042123
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040139
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062390
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045760
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042518
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038372
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063236
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047603
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041731
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040382
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040852
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037085
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044470
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038467
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047802
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045189
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043230
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039353
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062072
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047677
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041358
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039876
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038695
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038793
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062036
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046703
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057897
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045158
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041753
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037695
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036562
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036410
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036303
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037115
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034346
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036633
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037328
+OTHER AGENT's STATE (1):   0 0 0 0
+0.033584
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036717
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036505
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035186
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064452
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062375
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060997
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048486
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036992
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062550
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043655
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040934
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039754
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061737
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043264
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040040
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039326
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036777
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035334
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035884
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043454
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062490
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057996
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056041
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059151
+OTHER AGENT's STATE (0):   0 0 0 0
+0.085150
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046146
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062380
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062965
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061634
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063513
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062883
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060515
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064954
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064015
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063006
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063371
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064668
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063620
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062787
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067817
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062767
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064527
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064613
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065291
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062388
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063285
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064670
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063687
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070128
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063528
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072937
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064370
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072701
+OTHER AGENT's STATE (1):   0 0 0 0
+0.076420
+OTHER AGENT's STATE (0):   0 0 0 0
+0.069873
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063137
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074607
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063652
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074384
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043882
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041284
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036870
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036579
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037277
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039152
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035441
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041220
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061709
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041548
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036314
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036605
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038350
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036843
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040910
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039005
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038075
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037618
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036786
+OTHER AGENT's STATE (0):   0 0 0 0
+0.033769
+OTHER AGENT's STATE (1):   0 0 0 0
+0.034030
+OTHER AGENT's STATE (0):   0 0 0 0
+0.032945
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036530
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036303
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036375
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036053
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036006
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042483
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035799
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036581
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037605
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035800
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038629
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037230
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035721
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037413
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036874
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045754
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038181
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034709
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036594
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034877
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035020
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035507
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035019
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062745
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046672
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048574
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042565
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038747
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043410
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042517
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039572
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043810
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040593
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043931
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042714
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065138
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053386
+OTHER AGENT's STATE (0):   0 0 0 0
+0.046555
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037812
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042483
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040036
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040618
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039920
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045857
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044026
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058683
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042220
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047831
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042667
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070544
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045579
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064008
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050875
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063213
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053489
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057188
+OTHER AGENT's STATE (1):   0 0 0 0
+0.054414
+OTHER AGENT's STATE (0):   0 0 0 0
+0.053297
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042658
+OTHER AGENT's STATE (0):   0 0 0 0
+0.049798
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042380
+OTHER AGENT's STATE (0):   0 0 0 0
+0.053233
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042702
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068812
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050383
+OTHER AGENT's STATE (0):   0 0 0 0
+0.084450
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055829
+OTHER AGENT's STATE (0):   0 0 0 0
+0.087255
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060042
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060050
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046937
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063474
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048175
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066221
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064318
+OTHER AGENT's STATE (0):   0 0 0 0
+0.069799
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061055
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067067
+OTHER AGENT's STATE (1):   0 0 0 0
+0.066854
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059979
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046050
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059135
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040330
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054693
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035759
+OTHER AGENT's STATE (0):   0 0 0 0
+0.051296
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044986
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065751
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045922
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063273
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044705
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066197
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047717
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066031
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063191
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068444
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063904
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070250
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053596
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067154
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060631
+OTHER AGENT's STATE (0):   0 0 0 0
+0.069540
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051885
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063889
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062501
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055093
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060322
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067110
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060601
+OTHER AGENT's STATE (0):   0 0 0 0
+0.071926
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064649
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079156
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057818
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067512
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061636
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064393
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055486
+OTHER AGENT's STATE (0):   0 0 0 0
+0.051678
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058550
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058234
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042862
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058398
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058166
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064020
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051441
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054423
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046542
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057730
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035217
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060866
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039309
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047191
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039408
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072639
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067581
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056923
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057131
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062479
+OTHER AGENT's STATE (1):   0 0 0 0
+0.069740
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061039
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045051
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066613
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062716
+OTHER AGENT's STATE (0):   0 0 0 0
+0.052307
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048500
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065370
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045437
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054322
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055165
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063320
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045853
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062425
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048311
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058856
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044876
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065067
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061262
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074435
+OTHER AGENT's STATE (1):   0 0 0 0
+0.083787
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079794
+OTHER AGENT's STATE (1):   0 0 0 0
+0.066714
+OTHER AGENT's STATE (0):   0 0 0 0
+0.082426
+OTHER AGENT's STATE (1):   0 0 0 0
+0.072178
+OTHER AGENT's STATE (0):   0 0 0 0
+0.073391
+OTHER AGENT's STATE (1):   0 0 0 0
+0.068331
+OTHER AGENT's STATE (0):   0 0 0 0
+0.076249
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041521
+OTHER AGENT's STATE (0):   0 0 0 0
+0.078741
+OTHER AGENT's STATE (1):   0 0 0 0
+0.068554
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079450
+OTHER AGENT's STATE (1):   0 0 0 0
+0.066327
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070631
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065922
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074145
+OTHER AGENT's STATE (1):   0 0 0 0
+0.076699
+OTHER AGENT's STATE (0):   0 0 0 0
+0.095477
+OTHER AGENT's STATE (1):   0 0 0 0
+0.083450
+OTHER AGENT's STATE (0):   0 0 0 0
+0.073176
+OTHER AGENT's STATE (1):   0 0 0 0
+0.066760
+OTHER AGENT's STATE (0):   0 0 0 0
+0.078322
+OTHER AGENT's STATE (1):   0 0 0 0
+0.068694
+OTHER AGENT's STATE (0):   0 0 0 0
+0.084529
+OTHER AGENT's STATE (1):   0 0 0 0
+0.080145
+OTHER AGENT's STATE (0):   0 0 0 0
+0.123101
+OTHER AGENT's STATE (1):   0 0 0 0
+0.080125
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079069
+OTHER AGENT's STATE (1):   0 0 0 0
+0.087687
+OTHER AGENT's STATE (0):   0 0 0 0
+0.080032
+OTHER AGENT's STATE (1):   0 0 0 0
+0.070134
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074741
+OTHER AGENT's STATE (1):   0 0 0 0
+0.070178
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079708
+OTHER AGENT's STATE (1):   0 0 0 0
+0.070414
+OTHER AGENT's STATE (0):   0 0 0 0
+0.075215
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062923
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072587
+OTHER AGENT's STATE (1):   0 0 0 0
+0.095750
+OTHER AGENT's STATE (0):   0 0 0 0
+0.076862
+OTHER AGENT's STATE (1):   0 0 0 0
+0.074091
+OTHER AGENT's STATE (0):   0 0 0 0
+0.077695
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057800
+OTHER AGENT's STATE (0):   0 0 0 0
+0.082988
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067086
+OTHER AGENT's STATE (0):   0 0 0 0
+0.081473
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067914
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072000
+OTHER AGENT's STATE (1):   0 0 0 0
+0.070661
+OTHER AGENT's STATE (0):   0 0 0 0
+0.075375
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059329
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057345
+OTHER AGENT's STATE (1):   0 0 0 0
+0.072280
+OTHER AGENT's STATE (0):   0 0 0 0
+0.071906
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067404
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074873
+OTHER AGENT's STATE (1):   0 0 0 0
+0.066665
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070822
+OTHER AGENT's STATE (1):   0 0 0 0
+0.070649
+OTHER AGENT's STATE (0):   0 0 0 0
+0.075481
+OTHER AGENT's STATE (1):   0 0 0 0
+0.074046
+OTHER AGENT's STATE (0):   0 0 0 0
+0.083490
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067912
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061342
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043483
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074168
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049227
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068513
+OTHER AGENT's STATE (1):   0 0 0 0
+0.070538
+OTHER AGENT's STATE (0):   0 0 0 0
+0.081561
+OTHER AGENT's STATE (1):   0 0 0 0
+0.093370
+OTHER AGENT's STATE (0):   0 0 0 0
+0.076497
+OTHER AGENT's STATE (1):   0 0 0 0
+0.072434
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064245
+OTHER AGENT's STATE (1):   0 0 0 0
+0.073282
+OTHER AGENT's STATE (0):   0 0 0 0
+0.076409
+OTHER AGENT's STATE (1):   0 0 0 0
+0.071104
+OTHER AGENT's STATE (0):   0 0 0 0
+0.082154
+OTHER AGENT's STATE (1):   0 0 0 0
+0.069327
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064208
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059561
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068822
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043249
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063339
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065758
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061986
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055364
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066206
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053325
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044138
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040674
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058864
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046021
+OTHER AGENT's STATE (0):   0 0 0 0
+0.083897
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061143
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067503
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061684
+OTHER AGENT's STATE (0):   0 0 0 0
+0.069757
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062979
+OTHER AGENT's STATE (0):   0 0 0 0
+0.069809
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044133
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072239
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064907
+OTHER AGENT's STATE (0):   0 0 0 0
+0.069720
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065032
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074508
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060552
+OTHER AGENT's STATE (0):   0 0 0 0
+0.071167
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058772
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064839
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059434
+OTHER AGENT's STATE (0):   0 0 0 0
+0.073042
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061592
+OTHER AGENT's STATE (0):   0 0 0 0
+0.085281
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067131
+OTHER AGENT's STATE (0):   0 0 0 0
+0.077455
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062316
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079026
+OTHER AGENT's STATE (1):   0 0 0 0
+0.071011
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070529
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063449
+OTHER AGENT's STATE (0):   0 0 0 0
+0.076627
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064147
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056234
+OTHER AGENT's STATE (1):   0 0 0 0
+0.068331
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062490
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057500
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065085
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059391
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063760
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057659
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062904
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061051
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064325
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059955
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065263
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059200
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061978
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059919
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061561
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060158
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063120
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059812
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062876
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060435
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064810
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057753
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062862
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065085
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068827
+OTHER AGENT's STATE (1):   0 0 0 0
+0.081750
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072524
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063515
+OTHER AGENT's STATE (0):   0 0 0 0
+0.078382
+OTHER AGENT's STATE (1):   0 0 0 0
+0.068485
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072236
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059355
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062651
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060485
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062286
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061956
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063193
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059127
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062037
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059324
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065422
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057522
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062512
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061602
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058440
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046059
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057322
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044209
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065292
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038060
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047202
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053219
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059623
+OTHER AGENT's STATE (1):   0 0 0 0
+0.074478
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060954
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057042
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072497
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039825
+OTHER AGENT's STATE (0):   0 0 0 0
+0.075691
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042699
+OTHER AGENT's STATE (0):   0 0 0 0
+0.077630
+OTHER AGENT's STATE (1):   0 0 0 0
+0.077045
+OTHER AGENT's STATE (0):   0 0 0 0
+0.088817
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052888
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068151
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053067
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042783
+OTHER AGENT's STATE (1):   0 0 0 0
+0.032785
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063731
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049492
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062970
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040983
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063427
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046214
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062146
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045278
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062565
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042445
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062416
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046234
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039442
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037372
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034539
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035404
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038262
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045222
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063916
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064676
+OTHER AGENT's STATE (0):   0 0 0 0
+0.081073
+OTHER AGENT's STATE (1):   0 0 0 0
+0.072342
+OTHER AGENT's STATE (0):   0 0 0 0
+0.078771
+OTHER AGENT's STATE (1):   0 0 0 0
+0.072874
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056862
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042521
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054557
+OTHER AGENT's STATE (1):   0 0 0 0
+0.066439
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064729
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058812
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062955
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061846
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064222
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061724
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064277
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048901
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061739
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039388
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036528
+OTHER AGENT's STATE (1):   0 0 0 0
+0.032973
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038917
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036399
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036757
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038667
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064515
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042041
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035829
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038151
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034825
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036142
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035813
+OTHER AGENT's STATE (1):   0 0 0 0
+0.032884
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035260
+OTHER AGENT's STATE (1):   0 0 0 0
+0.030778
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039947
+OTHER AGENT's STATE (1):   0 0 0 0
+0.033298
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040077
+OTHER AGENT's STATE (1):   0 0 0 0
+0.032258
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037430
+OTHER AGENT's STATE (1):   0 0 0 0
+0.034372
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038661
+OTHER AGENT's STATE (1):   0 0 0 0
+0.032988
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066418
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041758
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045434
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065778
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060800
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062021
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063490
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060747
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063165
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060614
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066806
+OTHER AGENT's STATE (1):   0 0 0 0
+0.070462
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064145
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060055
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062662
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064790
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067489
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059580
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066396
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064519
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068292
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053796
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061292
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052687
+OTHER AGENT's STATE (0):   0 0 0 0
+0.076454
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050072
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044602
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036709
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042225
+OTHER AGENT's STATE (1):   0 0 0 0
+0.033978
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063398
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059336
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063920
+OTHER AGENT's STATE (1):   0 0 0 0
+0.077256
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063691
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059917
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062418
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064041
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062752
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061369
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062879
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061169
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063647
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061433
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063351
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061784
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063025
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061209
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062377
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061906
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063605
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061066
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064398
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060015
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062945
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061414
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054516
+OTHER AGENT's STATE (1):   0 0 0 0
+0.077119
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066262
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045405
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066931
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049364
+OTHER AGENT's STATE (0):   0 0 0 0
+0.058134
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040685
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063298
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045832
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062812
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041220
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060987
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063106
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063267
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046321
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061495
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048092
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065734
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042490
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045381
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035277
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054913
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051877
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047531
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056828
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062957
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059597
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062552
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039952
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064650
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050165
+OTHER AGENT's STATE (0):   0 0 0 0
+0.047948
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053171
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054892
+OTHER AGENT's STATE (1):   0 0 0 0
+0.072672
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065797
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056045
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059049
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052553
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063817
+OTHER AGENT's STATE (1):   0 0 0 0
+0.074673
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066407
+OTHER AGENT's STATE (1):   0 0 0 0
+0.054885
+OTHER AGENT's STATE (0):   0 0 0 0
+0.048031
+OTHER AGENT's STATE (1):   0 0 0 0
+0.028759
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045639
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037409
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041292
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042040
+OTHER AGENT's STATE (0):   0 0 0 0
+0.051869
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061009
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062245
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041031
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039419
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035120
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037885
+OTHER AGENT's STATE (1):   0 0 0 0
+0.032514
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035937
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049844
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059074
+OTHER AGENT's STATE (1):   0 0 0 0
+0.078925
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074318
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040387
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062649
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051047
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070533
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042539
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060721
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043465
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060980
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060382
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064070
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038538
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063391
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055221
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054864
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036723
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065745
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056969
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061250
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060234
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065551
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060696
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060894
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044756
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062933
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042782
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039716
+OTHER AGENT's STATE (1):   0 0 0 0
+0.030797
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063990
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043327
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059124
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037123
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055772
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052153
+OTHER AGENT's STATE (0):   0 0 0 0
+0.073682
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052625
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065149
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050238
+OTHER AGENT's STATE (0):   0 0 0 0
+0.071133
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039105
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064748
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050849
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060900
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053809
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041450
+OTHER AGENT's STATE (1):   0 0 0 0
+0.027409
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044172
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044007
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064558
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046062
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041294
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037359
+OTHER AGENT's STATE (0):   0 0 0 0
+0.043164
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044252
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060937
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042844
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061839
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057549
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062328
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060871
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066871
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052680
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055345
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043176
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064060
+OTHER AGENT's STATE (1):   0 0 0 0
+0.053870
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062666
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050887
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063097
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042939
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064825
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047339
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061678
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042040
+OTHER AGENT's STATE (0):   0 0 0 0
+0.046318
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040709
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062840
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043416
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042327
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038985
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040211
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037697
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040026
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035071
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041168
+OTHER AGENT's STATE (1):   0 0 0 0
+0.034834
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038167
+OTHER AGENT's STATE (1):   0 0 0 0
+0.028299
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037514
+OTHER AGENT's STATE (1):   0 0 0 0
+0.031449
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064133
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060604
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062982
+OTHER AGENT's STATE (1):   0 0 0 0
+0.075576
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065433
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062172
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067170
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052408
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065438
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039341
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066583
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051716
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063043
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044326
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062676
+OTHER AGENT's STATE (1):   0 0 0 0
+0.054912
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066251
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063809
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067430
+OTHER AGENT's STATE (1):   0 0 0 0
+0.064463
+OTHER AGENT's STATE (0):   0 0 0 0
+0.071704
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044184
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066045
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047889
+OTHER AGENT's STATE (0):   0 0 0 0
+0.056034
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043315
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062448
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045755
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063911
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055919
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072765
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044967
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064212
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045625
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062879
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041839
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062387
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041630
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038578
+OTHER AGENT's STATE (1):   0 0 0 0
+0.033719
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035706
+OTHER AGENT's STATE (1):   0 0 0 0
+0.032089
+OTHER AGENT's STATE (0):   0 0 0 0
+0.045121
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055239
+OTHER AGENT's STATE (0):   0 0 0 0
+0.053150
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035655
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061785
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040786
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063247
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039129
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055264
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035698
+OTHER AGENT's STATE (0):   0 0 0 0
+0.054033
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035794
+OTHER AGENT's STATE (0):   0 0 0 0
+0.053638
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048255
+OTHER AGENT's STATE (0):   0 0 0 0
+0.052372
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035638
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036619
+OTHER AGENT's STATE (1):   0 0 0 0
+0.033829
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036092
+OTHER AGENT's STATE (1):   0 0 0 0
+0.034275
+OTHER AGENT's STATE (0):   0 0 0 0
+0.036204
+OTHER AGENT's STATE (1):   0 0 0 0
+0.047303
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060838
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051686
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062867
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039442
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060887
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065036
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063420
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062271
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062656
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038482
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040177
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038157
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065389
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052875
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063545
+OTHER AGENT's STATE (1):   0 0 0 0
+0.042079
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035554
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035572
+OTHER AGENT's STATE (0):   0 0 0 0
+0.037195
+OTHER AGENT's STATE (1):   0 0 0 0
+0.031353
+OTHER AGENT's STATE (0):   0 0 0 0
+0.034439
+OTHER AGENT's STATE (1):   0 0 0 0
+0.032178
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062876
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037846
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061694
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045613
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039754
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036467
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063422
+OTHER AGENT's STATE (1):   0 0 0 0
+0.037813
+OTHER AGENT's STATE (0):   0 0 0 0
+0.061792
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043414
+OTHER AGENT's STATE (0):   0 0 0 0
+0.077668
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040690
+OTHER AGENT's STATE (0):   0 0 0 0
+0.039988
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036236
+OTHER AGENT's STATE (0):   0 0 0 0
+0.038250
+OTHER AGENT's STATE (1):   0 0 0 0
+0.035498
+OTHER AGENT's STATE (0):   0 0 0 0
+0.057766
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039579
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064000
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040951
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041728
+OTHER AGENT's STATE (1):   0 0 0 0
+0.038659
+OTHER AGENT's STATE (0):   0 0 0 0
+0.040019
+OTHER AGENT's STATE (1):   0 0 0 0
+0.036730
+OTHER AGENT's STATE (0):   0 0 0 0
+0.035653
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050191
+OTHER AGENT's STATE (0):   0 0 0 0
+0.062817
+OTHER AGENT's STATE (1):   0 0 0 0
+0.049182
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059575
+OTHER AGENT's STATE (1):   0 0 0 0
+0.076939
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070734
+OTHER AGENT's STATE (1):   0 0 0 0
+0.050666
+OTHER AGENT's STATE (0):   0 0 0 0
+0.051085
+OTHER AGENT's STATE (1):   0 0 0 0
+0.044361
+OTHER AGENT's STATE (0):   0 0 0 0
+0.055399
+OTHER AGENT's STATE (1):   0 0 0 0
+0.031089
+OTHER AGENT's STATE (0):   0 0 0 0
+0.069845
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052480
+OTHER AGENT's STATE (0):   0 0 0 0
+0.085412
+OTHER AGENT's STATE (1):   0 0 0 0
+0.067449
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079810
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040557
+OTHER AGENT's STATE (0):   0 0 0 0
+0.080503
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046308
+OTHER AGENT's STATE (0):   0 0 0 0
+0.073903
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065817
+OTHER AGENT's STATE (0):   0 0 0 0
+0.075861
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045902
+OTHER AGENT's STATE (0):   0 0 0 0
+0.046782
+OTHER AGENT's STATE (1):   0 0 0 0
+0.033925
+OTHER AGENT's STATE (0):   0 0 0 0
+0.041380
+OTHER AGENT's STATE (1):   0 0 0 0
+0.043349
+OTHER AGENT's STATE (0):   0 0 0 0
+0.060440
+OTHER AGENT's STATE (1):   0 0 0 0
+0.056509
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065997
+OTHER AGENT's STATE (1):   0 0 0 0
+0.460676
+OTHER AGENT's STATE (0):   0 0 0 0
+0.042195
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061095
+OTHER AGENT's STATE (0):   0 0 0 0
+0.063977
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061511
+OTHER AGENT's STATE (0):   0 0 0 0
+0.078058
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059618
+OTHER AGENT's STATE (0):   0 0 0 0
+0.076903
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059819
+OTHER AGENT's STATE (0):   0 0 0 0
+0.075216
+OTHER AGENT's STATE (1):   0 0 0 0
+0.051350
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068223
+OTHER AGENT's STATE (1):   0 0 0 0
+0.063760
+OTHER AGENT's STATE (0):   0 0 0 0
+0.082448
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062206
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065742
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052662
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070983
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065444
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068091
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041582
+OTHER AGENT's STATE (0):   0 0 0 0
+0.079593
+OTHER AGENT's STATE (1):   0 0 0 0
+0.040467
+OTHER AGENT's STATE (0):   0 0 0 0
+0.076354
+OTHER AGENT's STATE (1):   0 0 0 0
+0.065978
+OTHER AGENT's STATE (0):   0 0 0 0
+0.072775
+OTHER AGENT's STATE (1):   0 0 0 0
+0.057232
+OTHER AGENT's STATE (0):   0 0 0 0
+0.071609
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062080
+OTHER AGENT's STATE (0):   0 0 0 0
+0.075304
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058852
+OTHER AGENT's STATE (0):   0 0 0 0
+0.068150
+OTHER AGENT's STATE (1):   0 0 0 0
+0.048949
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064222
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061770
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067661
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058728
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065325
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058899
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064331
+OTHER AGENT's STATE (1):   0 0 0 0
+0.058132
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067256
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055129
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065081
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062009
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066309
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059430
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065362
+OTHER AGENT's STATE (1):   0 0 0 0
+0.073734
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065354
+OTHER AGENT's STATE (1):   0 0 0 0
+0.059553
+OTHER AGENT's STATE (0):   0 0 0 0
+0.083455
+OTHER AGENT's STATE (1):   0 0 0 0
+0.061181
+OTHER AGENT's STATE (0):   0 0 0 0
+0.070333
+OTHER AGENT's STATE (1):   0 0 0 0
+0.062011
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064487
+OTHER AGENT's STATE (1):   0 0 0 0
+0.055620
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065325
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052535
+OTHER AGENT's STATE (0):   0 0 0 0
+0.067410
+OTHER AGENT's STATE (1):   0 0 0 0
+0.045136
+OTHER AGENT's STATE (0):   0 0 0 0
+0.065698
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052587
+OTHER AGENT's STATE (0):   0 0 0 0
+0.081345
+OTHER AGENT's STATE (1):   0 0 0 0
+0.052397
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064864
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041898
+OTHER AGENT's STATE (0):   0 0 0 0
+0.074201
+OTHER AGENT's STATE (1):   0 0 0 0
+0.046344
+OTHER AGENT's STATE (0):   0 0 0 0
+0.059724
+OTHER AGENT's STATE (1):   0 0 0 0
+0.060487
+OTHER AGENT's STATE (0):   0 0 0 0
+0.066451
+OTHER AGENT's STATE (1):   0 0 0 0
+0.041912
+OTHER AGENT's STATE (0):   0 0 0 0
+0.044398
+OTHER AGENT's STATE (1):   0 0 0 0
+0.039375
+OTHER AGENT's STATE (0):   0 0 0 0
+0.064828
+OTHER AGENT's STATE (1):   0 0 0 0

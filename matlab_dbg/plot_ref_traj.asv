@@ -1,0 +1,17 @@
+clearvars;
+MPC = readmatrix('ref_taj_MPC.txt')
+% LOCO = readmatrix('ref_taj_LOCO.txt')
+figure(1)
+clf
+plot(MPC(1, :), MPC(2, :), 'linestyle', 'none', 'marker', 'o');
+hold on
+% plot(LOCO(1, :), LOCO(2, :), 'linestyle', 'none', 'marker', 'd');
+
+figure(2)
+clf
+vel = readmatrix('vel_traj_MPC.txt')
+time = 1:size(vel,2);
+plot(time(20:end-20), vel(1, 20:end-20)),2,1);
+hold on
+plot(time(20:end-20), vel(2, 20:end-20));
+% plot(time, vel(2, :));

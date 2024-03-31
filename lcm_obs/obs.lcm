@@ -1,0 +1,7 @@
+package obs_ros;
+
+struct obs 
+{
+    double x[20];
+    double y[20];
+}
