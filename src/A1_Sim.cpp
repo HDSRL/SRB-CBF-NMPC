@@ -20,6 +20,9 @@
 #include "LocoWrapper.hpp"
 #include "shared_structs.hpp"
 
+bool rough_terrain_en = 0;
+bool obstacle_en = 0;
+
 using std::cout;
 using std::cin;
 
@@ -811,7 +814,7 @@ int main(int argc, char *argv[]) {
 
     std::fstream outFile("/home/basit/Desktop/A1_RaiSim_Outputs/failingDistances.txt", std::ios::out);
 
-    const int NUMBER_OF_SIMS = 200;
+    const int NUMBER_OF_SIMS = 1;
 
     const float threshold = 0.4;
 
@@ -878,30 +881,35 @@ int main(int argc, char *argv[]) {
     int num_rows = num_blocks/1; // Number of rows for block placement
     float spacing_factor = 1.5; // Adjust spacing between blocks
 
-    for (size_t i = 0; i < num_blocks; i++) {
-        float wood_height = dis_height(gen1); // Generate a random height for each box
-        float wood_width = dis_width(gen2);   // Generate a random width for each box
-        float wood_length = dis_length(gen3); // Generate a random length for each box
-        int color_index = dis_color(gen1);    // Generate a random color index
+    if(rough_terrain_en) {
+        for (size_t i = 0; i < num_blocks; i++) {
+            float wood_height = dis_height(gen1); // Generate a random height for each box
+            float wood_width = dis_width(gen2);   // Generate a random width for each box
+            float wood_length = dis_length(gen3); // Generate a random length for each box
+            int color_index = dis_color(gen1);    // Generate a random color index
 
-        wood_blocks.push_back(world.addBox(wood_width, wood_length, wood_height, 0.1)); // Add the box to the world with random dimensions
-        vis->createGraphicalObject(wood_blocks.back(), "wood_block" + std::to_string(i), colors[color_index]);
+            wood_blocks.push_back(world.addBox(wood_width, wood_length, wood_height, 0.1)); // Add the box to the world with random dimensions
+            vis->createGraphicalObject(wood_blocks.back(), "wood_block" + std::to_string(i), colors[color_index]);
 
-        // Set the position of the box in a grid pattern
-        int row = i / num_rows;
-        int col = i % num_rows;
-        wood_blocks.back()->setPosition(col * wood_width * spacing_factor, row * wood_length * spacing_factor, wood_height / 2);
-    }
-
+            // Set the position of the box in a grid pattern
+            int row = i / num_rows;
+            int col = i % num_rows;
+            wood_blocks.back()->setPosition(col * wood_width * spacing_factor, row * wood_length * spacing_factor, wood_height / 2);
+        }
+    };
 
 
     // Populate the obstacles 
-    int number_of_obs = NUMBER_OF_OBS;
+    // int number_of_obs = NUMBER_OF_OBS;
+
     std::vector<raisim::Box*> obstacles;
-    for (size_t i = 0; i < number_of_obs; i++)
+    if (obstacle_en)
     {
-        obstacles.push_back(world.addBox(box_width,box_width,0.3,0.1));
-        vis->createGraphicalObject(obstacles.back(), "box"+std::to_string(i), "red");
+        for (size_t i = 0; i < NUMBER_OF_OBS; i++)
+        {
+            obstacles.push_back(world.addBox(box_width,box_width,0.3,0.1));
+            vis->createGraphicalObject(obstacles.back(), "box"+std::to_string(i), "red");
+        }
     }
 
     // ============================================================ //
@@ -954,6 +962,12 @@ int main(int argc, char *argv[]) {
             Pobs(0, col) = randX;
             Pobs(1, col) = randY;
 
+            if(!obstacle_en)
+            {
+                // Add 100 in y values to move obstacles out of the way 
+                Pobs.row(1).array() += 100;
+            }
+
             // Generate uncertainty
             double uncertaintyX = dis_uncertainty(gen);
             double uncertaintyY = dis_uncertainty(gen);
@@ -995,51 +1009,23 @@ int main(int argc, char *argv[]) {
 
             std::cout << "Pobs:\n" << Pobs << "\n\n";
             std::cout << "Pobs_real (with uncertainty):\n" << Pobs_real << "\n";
-            // cout << "Can we reach here SIM 4"; cin.get();
-
 
             Pstart << 0.0, 0.0, 0.0, -0.9, -1, 0, -1, -0.9;
-
-            // EXP 03 and Sim 1 / Sim 2
-            // Pobs   <<       2.2,            1,         1,             1,              1,                3,             3,        3,       -100,
-            //                 0.9,            1,     -0.75,             2,          -1.75,              0.5,         -0.25,    -1.75,    -0.5 + 100; 
-
-            // Pobs_real   <<      2.2,            1,         0.85,             1,              1,                3,           3.0,        3,       -100,
-            //                     0.9,            1.2,     -0.65,             2,          -1.75,              0.2,         -0.70,     -2.2,    -0.5 + 100; 
-
-            // data0.q[0] = Pstart(0);
-            // data0.q[1] = Pstart(1);
-            // data0.q[2] = 0.12;
-
-            // data1.q[0] = Pstart(2);
-            // data1.q[1] = Pstart(3);
-            // data1.q[2] = 0.12;
-
-            // HLData0.last_state1 << Pstart(2), Pstart(3), 0, 0;
-            // HLData1.last_state0 << Pstart(0), Pstart(1), 0, 0;
         
             // Populate the obstacles 
             int obs_iter = 0;
-            for (auto it = obstacles.begin(); it != obstacles.end(); ++it) {
-                raisim::Box* obstacle = *it;
-                // Use 'obstacle' as needed
-                obstacle->setPosition(Pobs_real(0,obs_iter),Pobs_real(1,obs_iter),box_z);
-                obstacle->setMass(0.2);
-                obstacle->setOrientation(0,0,0,1);
-                obs_iter++;
+
+            if (obstacle_en)
+            {
+                for (auto it = obstacles.begin(); it != obstacles.end(); ++it) {
+                    raisim::Box* obstacle = *it;
+                    // Use 'obstacle' as needed
+                    obstacle->setPosition(Pobs_real(0,obs_iter),Pobs_real(1,obs_iter),box_z);
+                    obstacle->setMass(0.2);
+                    obstacle->setOrientation(0,0,0,1);
+                    obs_iter++;
+                }
             }
-
-            // // Populate the obstacles 
-            // int wood_iter = 0;
-            // for (auto it = wood_blocks.begin(); it != wood_blocks.end(); ++it) {
-            //     raisim::Box* wood = *it;
-            //     // Use 'obstacle' as needed
-            //     int row = wood_iter / num_rows;
-            //     int col = wood_iter % num_rows;
-            //     wood->setPosition(col * wood_width * spacing_factor, row * wood_length * spacing_factor, wood_height / 2);
-            //     wood_iter++;
-            // }
-
 
             // SET AGENT POSITIONS FOR THE NEW SIM
             A1.back()->setGeneralizedCoordinate({Pstart(0), Pstart(1), 0.12, 1, 0, 0, 0,
@@ -1211,7 +1197,7 @@ int main(int argc, char *argv[]) {
                 // disturbance(A1, list, dist_start, dist_stop, simcounter);
 
                 controller0(A1,loco_obj, MPC_Agent0, simcounter, &checkifrunMPC0);
-                controller1(A2,loco_obj2, MPC_Agent1, simcounter, &checkifrunMPC1);
+                // controller1(A2,loco_obj2, MPC_Agent1, simcounter, &checkifrunMPC1);
 
                 MPC_Agent0->updateDistance_to_fail();
                 MPC_Agent1->updateDistance_to_fail();
