@@ -171,7 +171,7 @@ void ExternalComm0::HighLevel(){
 		// std::cout << "HLData.q = " << HLData.q[0] << "     HLData.q = " << HLData.q[1] << std::endl;
 		// std::cout << "Bezier Fit:\n" << HLData.alpha_COM << "\n";
 		// mpc_obj->plannedCycleIndex(TROT); 
-		mpc_obj->lipMPC_eventbase();
+		mpc_obj->run_NMPC();
 
 		HLData0.alpha_COM = mpc_obj->get_alphaCOM();
 		HLData0.MPC_sol_ = mpc_obj->get_MPCsol();
@@ -391,7 +391,7 @@ void ExternalComm1::HighLevel(){
 		// std::cout << "HLData.q = " << HLData.q[0] << "     HLData.q = " << HLData.q[1] << std::endl;
 		// std::cout << "Bezier Fit:\n" << HLData.alpha_COM << "\n";
 		// mpc_obj->plannedCycleIndex(TROT);
-		mpc_obj->lipMPC_eventbase();
+		mpc_obj->run_NMPC();
 
 		HLData1.alpha_COM = mpc_obj->get_alphaCOM();
 		HLData1.MPC_sol_ = mpc_obj->get_MPCsol();

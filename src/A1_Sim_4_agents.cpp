@@ -169,7 +169,7 @@ void controller0(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
 
         if ((*runMPC == 1 || first_time0) && LLData0.domain < TOTALSTEPNUM)
         {
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
             first_time0 = 0;
 
@@ -217,7 +217,7 @@ void controller0(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
         {
             sec_time = 0;
             // mpc_obj->plannedCycleIndex(loco_kind);
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
 
             HLData0.MPC_data_available = 1;
@@ -344,7 +344,7 @@ void controller1(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
 
         if ((*runMPC == 1 || first_time1) && LLData1.domain < TOTALSTEPNUM)
         {   
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
             first_time1 = 0;
 
@@ -391,7 +391,7 @@ void controller1(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
         {
             sec_time = 0;
             mpc_obj->plannedCycleIndex(loco_kind);
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
 
             HLData1.MPC_data_available = 1;
@@ -520,7 +520,7 @@ void controller2(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
 
         if ((*runMPC == 1 || first_time0) && LLData2.domain < TOTALSTEPNUM)
         {
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
             first_time0 = 0;
 
@@ -568,7 +568,7 @@ void controller2(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
         {
             sec_time = 0;
             // mpc_obj->plannedCycleIndex(loco_kind);
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
 
             HLData2.MPC_data_available = 1;
@@ -695,7 +695,7 @@ void controller3(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
 
         if ((*runMPC == 1 || first_time1) && LLData3.domain < TOTALSTEPNUM)
         {   
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
             first_time1 = 0;
 
@@ -742,7 +742,7 @@ void controller3(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
         {
             sec_time = 0;
             mpc_obj->plannedCycleIndex(loco_kind);
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
 
             HLData3.MPC_data_available = 1;

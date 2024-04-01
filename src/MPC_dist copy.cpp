@@ -47,7 +47,7 @@ MPC_dist::MPC_dist() // inside arguments (const StateInfo* st)
 
 //MPC_dist::~MPC_dist() {};
 
-void MPC_dist::lipMPC_eventbase() {
+void MPC_dist::run_NMPC() {
     double M;
     double Ndomain;
     double N;

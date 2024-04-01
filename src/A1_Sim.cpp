@@ -21,7 +21,7 @@
 #include "shared_structs.hpp"
 
 bool rough_terrain_en = 0;
-bool obstacle_en = 1;
+bool obstacle_en = 0;
 
 using std::cout;
 using std::cin;
@@ -183,7 +183,7 @@ void controller0(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
 
         if ((*runMPC == 1 || first_time0) && LLData0.domain < TOTALSTEPNUM)
         {
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
             first_time0 = 0;
 
@@ -231,7 +231,7 @@ void controller0(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
         {
             sec_time = 0;
             // mpc_obj->plannedCycleIndex(loco_kind);
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
 
             HLData0.MPC_data_available = 1;
@@ -358,7 +358,7 @@ void controller1(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
 
         if ((*runMPC == 1 || first_time1) && LLData1.domain < TOTALSTEPNUM)
         {   
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
             first_time1 = 0;
 
@@ -405,7 +405,7 @@ void controller1(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
         {
             sec_time = 0;
             mpc_obj->plannedCycleIndex(loco_kind);
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
 
             HLData1.MPC_data_available = 1;
@@ -534,7 +534,7 @@ void controller2(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
 
         if ((*runMPC == 1 || first_time0) && LLData2.domain < TOTALSTEPNUM)
         {
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
             first_time0 = 0;
 
@@ -582,7 +582,7 @@ void controller2(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
         {
             sec_time = 0;
             // mpc_obj->plannedCycleIndex(loco_kind);
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
 
             HLData2.MPC_data_available = 1;
@@ -709,7 +709,7 @@ void controller3(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
 
         if ((*runMPC == 1 || first_time1) && LLData3.domain < TOTALSTEPNUM)
         {   
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
             first_time1 = 0;
 
@@ -756,7 +756,7 @@ void controller3(std::vector<raisim::ArticulatedSystem *> A1, LocoWrapper *loco_
         {
             sec_time = 0;
             mpc_obj->plannedCycleIndex(loco_kind);
-            mpc_obj->lipMPC_eventbase();
+            mpc_obj->run_NMPC();
             *runMPC = 0;
 
             HLData3.MPC_data_available = 1;
@@ -922,10 +922,11 @@ int main(int argc, char *argv[]) {
     // ==================== SETUP MORE Robots ===================== //
     // ============================================================ //
 
-    std::vector<raisim::ArticulatedSystem*> A2;
-    A2.push_back(world.addArticulatedSystem(raisim::loadResource("A1/A1_modified.urdf")));
-    vis->createGraphicalObject(A2.back(), "A2");
-    A2.back()->setName("A1_Robot_2");
+    // AGENT 2
+    // std::vector<raisim::ArticulatedSystem*> A2;
+    // A2.push_back(world.addArticulatedSystem(raisim::loadResource("A1/A1_modified.urdf")));
+    // vis->createGraphicalObject(A2.back(), "A2");
+    // A2.back()->setName("A1_Robot_2");
 
     for (size_t sim = 0; sim < NUMBER_OF_SIMS; ++sim)
     {
@@ -991,14 +992,15 @@ int main(int argc, char *argv[]) {
             first_time3 = 
             sec_time = 1;
 
-            HLData0 = HLData0_Backup;
-            updateData0(SET_DATA, HL_DATA, &HLData0);
-            HLData1 = HLData1_Backup;
-            updateData1(SET_DATA, HL_DATA, &HLData1);
-            LLData0 = LLData0_Backup;
-            updateData0(SET_DATA, LL_DATA, &LLData0);
-            LLData1 = LLData1_Backup;
-            updateData1(SET_DATA, LL_DATA, &LLData1);
+            // AGENT 2
+            // HLData0 = HLData0_Backup;
+            // updateData0(SET_DATA, HL_DATA, &HLData0);
+            // HLData1 = HLData1_Backup;
+            // updateData1(SET_DATA, HL_DATA, &HLData1);
+            // LLData0 = LLData0_Backup;
+            // updateData0(SET_DATA, LL_DATA, &LLData0);
+            // LLData1 = LLData1_Backup;
+            // updateData1(SET_DATA, LL_DATA, &LLData1);
 
             // ============================================================ //
             // =================== SETUP ENVIRONMENT ====================== //
@@ -1035,16 +1037,17 @@ int main(int argc, char *argv[]) {
             loco_obj->setPstart(Pstart);
             loco_obj->setPobs(Pobs);
             loco_obj->generateReferenceTrajectory();
+            
+            // AGENT 2
+            // A2.back()->setGeneralizedCoordinate({Pstart(2), Pstart(3), 0.12, 1, 0, 0, 0,
+            //                                     0.0, Pi/3, -2.6, 0.0, Pi/3, -2.6, 0.0, Pi/3, -2.6, 0.0, Pi/3, -2.6});
+            // A2.back()->setControlMode(raisim::ControlMode::FORCE_AND_TORQUE);
 
-            A2.back()->setGeneralizedCoordinate({Pstart(2), Pstart(3), 0.12, 1, 0, 0, 0,
-                                                0.0, Pi/3, -2.6, 0.0, Pi/3, -2.6, 0.0, Pi/3, -2.6, 0.0, Pi/3, -2.6});
-            A2.back()->setControlMode(raisim::ControlMode::FORCE_AND_TORQUE);
-
-            LocoWrapper* loco_obj2 = new LocoWrapper(argc,argv);
-            loco_obj2->setAgentID(1); //Agent ID = 1
-            loco_obj2->setPstart(Pstart);
-            loco_obj2->setPobs(Pobs);
-            loco_obj2->generateReferenceTrajectory();
+            // LocoWrapper* loco_obj2 = new LocoWrapper(argc,argv);
+            // loco_obj2->setAgentID(1); //Agent ID = 1
+            // loco_obj2->setPstart(Pstart);
+            // loco_obj2->setPobs(Pobs);
+            // loco_obj2->generateReferenceTrajectory();
 
             // // Third Robot 
             // std::vector<raisim::ArticulatedSystem*> A3;
@@ -1153,22 +1156,23 @@ int main(int argc, char *argv[]) {
             MPC_Agent0->generateReferenceTrajectory();
             // cout << "Can we reach here SIM 2"; cin.get();
 
-            MPC_Agent1 = new MPC_dist();
-            MPC_Agent1->setAgentID(1);    //MPC_Agent1 = new MPC_dist();
-            MPC_Agent1->setPstart(Pstart);
-            MPC_Agent1->setPobs(Pobs);
-            MPC_Agent1->setPobs_real(Pobs_real);
-            MPC_Agent1->generateReferenceTrajectory();
+            // AGENT 2
+            // MPC_Agent1 = new MPC_dist();
+            // MPC_Agent1->setAgentID(1);    //MPC_Agent1 = new MPC_dist();
+            // MPC_Agent1->setPstart(Pstart);
+            // MPC_Agent1->setPobs(Pobs);
+            // MPC_Agent1->setPobs_real(Pobs_real);
+            // MPC_Agent1->generateReferenceTrajectory();
 
             if (solver == 0)
             {
                 MPC_Agent0->use_snopt = false;
-                MPC_Agent1->use_snopt = false;
+                // MPC_Agent1->use_snopt = false;
             }
             else
             {
                 MPC_Agent0->use_snopt = true;
-                MPC_Agent1->use_snopt = true;
+                // MPC_Agent1->use_snopt = true;
             }
             // MPC_Agent2 = new MPC_dist();
             // MPC_Agent2->setAgentID(2);    //MPC_Agent1 = new MPC_dist();
@@ -1198,10 +1202,10 @@ int main(int argc, char *argv[]) {
                 // controller1(A2,loco_obj2, MPC_Agent1, simcounter, &checkifrunMPC1);
 
                 MPC_Agent0->updateDistance_to_fail();
-                MPC_Agent1->updateDistance_to_fail();
+                // MPC_Agent1->updateDistance_to_fail();
 
                 failingDistance0 = MPC_Agent0->getDistance_to_fail();
-                failingDistance1 = MPC_Agent1->getDistance_to_fail();
+                // failingDistance1 = MPC_Agent1->getDistance_to_fail();
                 // controller2(A3,loco_obj3, MPC_Agent2, simcounter, &checkifrunMPC2);
                 // controller3(A4,loco_obj4, MPC_Agent3, simcounter, &checkifrunMPC3);
                 // controller(A3,loco_obj3,simcounter);
@@ -1262,9 +1266,9 @@ int main(int argc, char *argv[]) {
             outFile << failingDistance0 << "," << failingDistance1 << std::endl;
 
             delete loco_obj;
-            delete loco_obj2;
+            // delete loco_obj2;
             delete MPC_Agent0;
-            delete MPC_Agent1;
+            // delete MPC_Agent1;
         }
     }
     outFile.close();

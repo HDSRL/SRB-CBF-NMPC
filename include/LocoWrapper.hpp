@@ -45,7 +45,7 @@ public:
     void updateDesiredForce(Eigen::Matrix<double, 12, 1> fDes){VC->setDesiredForce(fDes);};
 
     // From Basit's Code
-    void lipMPC_eventbase();
+    void run_NMPC();
     void footstepPlanner_eventbase(double& M, double& Ndomain, double& N, double& mu, double& swingPhase, double& row_totalFootPrintGlobal, double& col_totalFootPrintGlobal);
     void copPlanner_eventbase(double M, double Ndomain, double N, double swingPhase);
     void fitComTrajectory_eventbase(double M, double Ndomain, double N, double swingPhase);
