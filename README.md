@@ -1,6 +1,10 @@
-# HDSRL Code
-- Distributed and Nonlinear Model Predictive Control using Reference Models for MultiAgent A1 Robots (Lab Website: https://www.kavehakbarihamed.com/)
-- Uses SNOPT as a nonlinear solver for NMPC
+# Safety-Critical and Distributed Nonlinear Predictive Controllers for Teams of Quadrupedal Robots
+This repository features the code for the paper [B. M. Imran, J. Kim, T. Chunawala, A. Leonessa and K. A. Hamed, "Safety-Critical and Distributed Nonlinear Predictive Controllers for Teams of Quadrupedal Robots," in IEEE Robotics and Automation Letters, vol. 10, no. 9, pp. 9176-9183, Sept. 2025, doi: 10.1109/LRA.2025.3592073](https://ieeexplore.ieee.org/document/11091376)
+
+# Overview
+- The paper cited above presents a novel distributed and nonlinear model predictive control using nonlinear SRB template models and distributed real-time safety-enforcing CBF-NMPC controllers for multi-agent quadrupedal robots. (Lab Website: https://www.kavehakbarihamed.com/)
+- The code uses RaiSim as simulation platform
+- Casadi framework with Ipopt is used for the nonlinear solver
 
 ## Code Organization
 The bulk of the code and computations is run through the class "LocoWrapper.cpp". However, the main function for initiating RaiSim and the simulations is in src/robots/A1_Sim.cpp. Note that other files in the robots folder may be outdated and are largely used for troublshooting.
@@ -28,7 +32,7 @@ make -j8
 
 ### Build and Run Code Using Script
 ```sh
-cd $WORKSPACE/A1_Robot
+cd $WORKSPACE/SRB_NMPC
 ./run_Raisim.sh
 ```
 
@@ -36,77 +40,30 @@ cd $WORKSPACE/A1_Robot
 ```sh
 cd $WORKSPACE
 cd A1_Robot/build
-./A1_FastMPC ../params/LL_w_CLF.txt ../params/MPC_params.txt ../params/Walking_params.txt
+./A1_Sim 
 ```
-- The inputs into the function call are optional, and may have different names so long as the naming convention is followed (see "Changing System Parameters" below)
-
-## Changing System Parameters
-- Open the files in A1_Robot/params
-- There are three seperate parameter files. "LL" contains low level parameters, "MPC" contains the MPC parameters, and "Walking" contains the walking parameters.
-- Note that new parameter files may created with different names, so long as the following naming convention is adhered to:
-    - The low level parameters file must contain "LL" in the name
-    - The MPC parameters file must contain "MPC" in the name
-    - The walking parameters file must contain "Walking" in the name
-- The bottom of the parameters files include information on the parameters that can be used/changed
-
-Here is an example of the contents of a low level parameters file:
-```
-0.5
-700
-35
-1
-1
-0.1
-1000000
-100000000
-100
-0.8
-
-
-// =========================================== //
-// ======= Ordering and default values ======= //
-// =========================================== //
-// Default Low Level
-mu = 0.7;    // coefficient of friction
-kp = 700;   // proportional gain on IO linearization
-kd = 40;    // derivative gain on IO linearization
-useCLF = 1;  // 1 or 0, indicates whether or not to use the CLF 
-
-// QP Cost
-tauPen = 1e0; // input weight
-dfPen  = 1e-1; // ||F-F_d|| weight
-auxPen = 1e6; // auxiliary var weight
-clfPen = 1e8; // clf defect var weight
-
-// QP Constraints
-auxMax = 100;  // max aux value
-clfEps = 0.8; // CLF convergence tuning variable
-
-```
-Notice that the bottom half of the file contains information about the ordering and default values, while the top half is the portion that should actually be changed to alter the behavior. Changing this file does not require that the executable is recompiled. Each text file provided will be read when the executable is called.
-
-## Visualization Parameters
-There are a series of parameters at the bottom of the simulation script that allows the user to control the visualization properties in RaiSim, as well as produce a recording automatically, most of which are self explainatory. In particular, the following parameters are available:
-
-```
-raisim::gui::showContacts = false;
-raisim::gui::showForces = false;
-raisim::gui::showCollision = false;
-raisim::gui::showBodies = true;
-
-std::string cameraview = "isoside"; // iso, side, top, front, sideiso
-bool panX = true;                   // Pan view with robot during walking (X direction)
-bool panY = false;                  // Pan view with robot during walking (Y direction)
-bool record = false;                // Record?
-double startTime = 0*ctrlHz;        // Recording start time
-double simlength = 300*ctrlHz;      // Sim end time
-double fps = 30;                  
-std::string directory = "PATH_TO_OUTPUT_DIRECTORY";
-std::string filename = "NAME_OF_VIDEO";
-```
-
-Note that the first four parameters, as well as panX and panY, can also be enabled/disabled using the GUI interface during simulation. Another important note is that, when panX or panY are enabled, the user will obtain erratic behavior when clicking on an object to change the view via the mouse. 
 
 Finally, there are several different checkerboard colors provided in the material file (rsc/material/myMaterials.material) and can be changed in the A1_Sim.cpp file. To generate a different cherckerboard color pattern, use the MATLAB script (rsc/material/ColoredChecker.m) and create a new material in myMaterials.material following the same convention as the other checkerboard materials.
-# Collision-Aware-DNMPC
-# Collision-Aware-DNMPC
+
+# Citation
+This work has been featured as  in IEEE Robotics and Automation Letters as of July 2025: 
+[B. M. Imran, J. Kim, T. Chunawala, A. Leonessa and K. A. Hamed, "Safety-Critical and Distributed Nonlinear Predictive Controllers for Teams of Quadrupedal Robots," in IEEE Robotics and Automation Letters, vol. 10, no. 9, pp. 9176-9183, Sept. 2025, doi: 10.1109/LRA.2025.3592073](https://ieeexplore.ieee.org/document/11091376)
+
+
+If you benefit from the code or work, please remember to cite us:
+```
+@ARTICLE{11091376,
+  author={Imran, Basit Muhammad and Kim, Jeeseop and Chunawala, Taizoon and Leonessa, Alexander and Hamed, Kaveh Akbari},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Safety-Critical and Distributed Nonlinear Predictive Controllers for Teams of Quadrupedal Robots}, 
+  year={2025},
+  volume={10},
+  number={9},
+  pages={9176-9183},
+  keywords={Safety;Quadrupedal robots;Collision avoidance;Legged locomotion;Planning;Real-time systems;Navigation;Lips;Silicon;Computational modeling;Legged robots;motion control;multi-contact whole-body motion planning and control},
+  doi={10.1109/LRA.2025.3592073}}
+
+```
+
+# YouTube video
+The YouTube link for the experiments and simulations is [here](https://www.youtube.com/watch?v=N0z3zvkmvW4).
