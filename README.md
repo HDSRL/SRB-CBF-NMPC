@@ -2,7 +2,7 @@
 This repository features the code for the paper [B. M. Imran, J. Kim, T. Chunawala, A. Leonessa and K. A. Hamed, "Safety-Critical and Distributed Nonlinear Predictive Controllers for Teams of Quadrupedal Robots," in IEEE Robotics and Automation Letters, vol. 10, no. 9, pp. 9176-9183, Sept. 2025, doi: 10.1109/LRA.2025.3592073](https://ieeexplore.ieee.org/document/11091376)
 
 # Overview
-- The paper cited above presents a novel distributed and nonlinear model predictive control using nonlinear SRB template models and distributed real-time safety-enforcing CBF-NMPC controllers for multi-agent quadrupedal robots. (Lab Website: https://www.kavehakbarihamed.com/)
+- The paper cited above presents a novel distributed and nonlinear model predictive control using nonlinear SRB template models and distributed real-time safety-enforcing CBF-NMPC controllers for multi-agent quadrupedal robots. (Lab Website: https://arcol.me.vt.edu/)
 - The code uses RaiSim as simulation platform
 - Casadi framework with Ipopt is used for the nonlinear solver
 
